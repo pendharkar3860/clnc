@@ -1,0 +1,257 @@
+CRITICAL - 2023-04-01 13:55:59 --> syntax error, unexpected 'exit' (T_EXIT), expecting ';' or ','
+in APPPATH\Validation\UserRules.php on line 18.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Validation\\UserRules.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\validation\\UserRules')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\validation\\UserRules')
+ 4 SYSTEMPATH\Validation\Validation.php(596): spl_autoload_call('App\\validation\\UserRules')
+ 5 SYSTEMPATH\Validation\Validation.php(117): CodeIgniter\Validation\Validation->loadRuleSets()
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 ROOTPATH\modules\Auth\Controllers\Login.php(39): CodeIgniter\Controller->validate([...], [...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Login->doLogin()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Login))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 14:01:38 --> password_hash() expects at least 2 parameters, 1 given
+in APPPATH\Validation\UserRules.php on line 18.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'password_hash() expects at least 2 parameters, 1 given', 'APPPATH\\Validation\\UserRules.php', 18, [...])
+ 2 APPPATH\Validation\UserRules.php(18): password_hash('shiv3860')
+ 3 SYSTEMPATH\Validation\Validation.php(312): App\validation\UserRules->validateUser('shiv3860', 'email,password', [...], null, 'password')
+ 4 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', 'shiv3860', [...], [...])
+ 5 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 6 ROOTPATH\modules\Auth\Controllers\Login.php(39): CodeIgniter\Controller->validate([...], [...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Login->doLogin()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Login))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 14:05:14 --> Class 'Modules\Auth\Controllers\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Login.php on line 46.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Login->doLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 14:06:10 --> Call to undefined method Modules\Auth\Controllers\Login::setUerMethod()
+in ROOTPATH\modules\Auth\Controllers\Login.php on line 48.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Login->doLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 14:09:41 --> Cannot call constructor
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 12.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 14:12:01 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 14:13:20 --> Call to undefined method Modules\Admin\Controllers\Dashboard::session()
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 14:14:41 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\modules\\Admin\\Controllers\\dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\Controllers\\dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\Controllers\\dashboard')
+ 4 [internal function]: spl_autoload_call('Modules\\Admin\\Controllers\\dashboard')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\Controllers\\dashboard', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 14:14:55 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\modules\\Admin\\Controllers\\dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\Controllers\\dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\Controllers\\dashboard')
+ 4 [internal function]: spl_autoload_call('Modules\\Admin\\Controllers\\dashboard')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\Controllers\\dashboard', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 14:14:56 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\modules\\Admin\\Controllers\\dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\Controllers\\dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\Controllers\\dashboard')
+ 4 [internal function]: spl_autoload_call('Modules\\Admin\\Controllers\\dashboard')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\Controllers\\dashboard', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 14:15:07 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\modules\\Admin\\Controllers\\dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\Controllers\\dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\Controllers\\dashboard')
+ 4 [internal function]: spl_autoload_call('Modules\\Admin\\Controllers\\dashboard')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\Controllers\\dashboard', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:12:31 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\modules\\Admin\\Controllers\\dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\Controllers\\dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\Controllers\\dashboard')
+ 4 [internal function]: spl_autoload_call('Modules\\Admin\\Controllers\\dashboard')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\Controllers\\dashboard', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:12:53 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\modules\\Admin\\Controllers\\dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\Controllers\\dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\Controllers\\dashboard')
+ 4 [internal function]: spl_autoload_call('Modules\\Admin\\Controllers\\dashboard')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\Controllers\\dashboard', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:12:54 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\modules\\Admin\\Controllers\\dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\Controllers\\dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\Controllers\\dashboard')
+ 4 [internal function]: spl_autoload_call('Modules\\Admin\\Controllers\\dashboard')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\Controllers\\dashboard', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:13:18 --> Use of undefined constant session - assumed 'session' (this will throw an Error in a future version of PHP)
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 13.
+ 1 ROOTPATH\modules\Admin\Controllers\dashboard.php(13): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant session - assumed \'session\' (this will throw an Error in a future version of PHP)', 'ROOTPATH\\modules\\Admin\\Controllers\\dashboard.php', 13, [])
+ 2 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 3 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:13:43 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:13:56 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:14:59 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:15:43 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:15:44 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:15:45 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:15:45 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:15:45 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:15:47 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 14.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:16:59 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:17:01 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:17:52 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:17:53 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:17:54 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:18:11 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:25:41 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:25:42 --> Call to a member function user() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 17:31:41 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR)
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 17.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\modules\\Admin\\Controllers\\dashboard.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\Controllers\\dashboard')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\Controllers\\dashboard')
+ 4 [internal function]: spl_autoload_call('Modules\\Admin\\Controllers\\dashboard')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\Controllers\\dashboard', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 18:03:22 --> Call to undefined method Modules\Admin\Controllers\Dashboard::session()
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-01 18:05:28 --> Use of undefined constant session - assumed 'session' (this will throw an Error in a future version of PHP)
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 15.
+ 1 ROOTPATH\modules\Admin\Controllers\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant session - assumed \'session\' (this will throw an Error in a future version of PHP)', 'ROOTPATH\\modules\\Admin\\Controllers\\dashboard.php', 15, [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,27 @@
+CRITICAL - 2023-04-11 14:06:03 --> Invalid file: "Modules\Admin\Views\navbar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Modules\\Admin\\Views\\navbar.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Modules\\Admin\\Views\\navbar', [], true)
+ 3 ROOTPATH\modules\Admin\Controllers\dashboard.php(23): view('Modules\\Admin\\Views\\navbar')
+ 4 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:08:20 --> Invalid file: "Modules\Admin\Views\navbar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Modules\\Admin\\Views\\navbar.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Modules\\Admin\\Views\\navbar', [], true)
+ 3 ROOTPATH\modules\Admin\Controllers\dashboard.php(23): view('Modules\\Admin\\Views\\navbar')
+ 4 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-11 14:09:04 --> Invalid file: "Modules\Admin\Views\navbar.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Modules\\Admin\\Views\\navbar.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Modules\\Admin\\Views\\navbar', [], true)
+ 3 ROOTPATH\modules\Admin\Controllers\dashboard.php(23): view('Modules\\Admin\\Views\\navbar')
+ 4 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Dashboard->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

@@ -1,0 +1,6 @@
+CRITICAL - 2023-04-04 17:08:26 --> Cannot use object of type CodeIgniter\Session\Session as array
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

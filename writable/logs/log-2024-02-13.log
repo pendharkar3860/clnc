@@ -1,0 +1,45 @@
+CRITICAL - 2024-02-13 16:36:32 --> Cannot use object of type Modules\Admin\Models\UserdetailModel as array
+in ROOTPATH\modules\Admin\Controllers\profile.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Profile->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Profile))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 16:40:26 --> Call to a member function last_query() on null
+in ROOTPATH\modules\Admin\Controllers\profile.php on line 26.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Profile->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Profile))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2024-02-13 16:43:36 --> Class 'App\Models\UserdetailModel' not found
+in ROOTPATH\modules\Admin\Controllers\profile.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Profile->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Profile))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2024-02-13 16:45:44 --> mysqli_sql_exception: Table 'shivamclinic.tbl_userdetail' doesn't exist in E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT *\nFROM `...', 0)
+#1 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *\nFROM `...')
+#2 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *\nFROM `...')
+#3 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 E:\wamp\www\clnc\modules\Admin\Controllers\profile.php(23): CodeIgniter\BaseModel->first()
+#7 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(934): Modules\Admin\Controllers\Profile->index()
+#8 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Profile))
+#9 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 E:\wamp\www\clnc\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2024-02-13 16:45:44 --> Table 'shivamclinic.tbl_userdetail' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `tbl_userdetail`
+WHERE `userid` = :userid:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 4 ROOTPATH\modules\Admin\Controllers\profile.php(23): CodeIgniter\BaseModel->first()
+ 5 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Profile->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Profile))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

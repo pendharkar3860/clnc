@@ -1,0 +1,148 @@
+CRITICAL - 2023-03-26 02:23:23 --> Call to a member function test() on null
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 02:23:48 --> Call to a member function test() on null
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 22.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 02:24:12 --> Call to a member function test() on null
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 02:24:34 --> Call to a member function test() on null
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 02:28:10 --> Call to a member function test() on null
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 02:38:18 --> Call to a member function test() on null
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 02:39:11 --> Call to a member function test() on null
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 02:39:58 --> Access level to Modules\Auth\Models\UserModel::$db must be protected (as in class CodeIgniter\Model) or weaker
+in ROOTPATH\modules\Auth\Models\UserModel.php on line 5.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-03-26 02:41:15 --> Access level to Modules\Auth\Models\UserModel::$db must be protected (as in class CodeIgniter\Model) or weaker
+in ROOTPATH\modules\Auth\Models\UserModel.php on line 5.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2023-03-26 03:20:44 --> Error connecting to the database: mysqli_sql_exception: Access denied for user ''@'localhost' (using password: NO) in E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', '', '', 'shivamclinic', 3306, '', 0)
+#1 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_unique('john.doe@exampl...', 'email', Array, NULL, 'email')
+#6 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('email', 'email', 'john.doe@exampl...', Array, Array)
+#7 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 E:\wamp\www\clnc\modules\Auth\Controllers\Registration.php(36): CodeIgniter\Controller->validate(Array)
+#9 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+#10 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+#11 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\wamp\www\clnc\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user ''@'localhost' (using password: NO) in E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#3 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#4 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_unique('john.doe@exampl...', 'email', Array, NULL, 'email')
+#5 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('email', 'email', 'john.doe@exampl...', Array, Array)
+#6 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#7 E:\wamp\www\clnc\modules\Auth\Controllers\Registration.php(36): CodeIgniter\Controller->validate(Array)
+#8 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+#9 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+#10 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 E:\wamp\www\clnc\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-03-26 03:20:44 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user ''@'localhost' (using password: NO)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_unique('john.doe@example.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('email', 'email', 'john.doe@example.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 ROOTPATH\modules\Auth\Controllers\Registration.php(36): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 9 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+10 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-03-26 03:22:03 --> mysqli_sql_exception: Table 'shivamclinic.users' doesn't exist in E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_unique('john.doe@exampl...', 'email', Array, NULL, 'email')
+#6 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('email', 'email', 'john.doe@exampl...', Array, Array)
+#7 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 E:\wamp\www\clnc\modules\Auth\Controllers\Registration.php(36): CodeIgniter\Controller->validate(Array)
+#9 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+#10 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+#11 E:\wamp\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 E:\wamp\www\clnc\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-03-26 03:22:03 --> Table 'shivamclinic.users' doesn't exist
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_unique('john.doe@example.com', 'email', [...], null, 'email')
+ 4 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('email', 'email', 'john.doe@example.com', [...], [...])
+ 5 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 6 ROOTPATH\modules\Auth\Controllers\Registration.php(36): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 15:17:00 --> "ArrayArray" is not a valid rule.
+in SYSTEMPATH\Controller.php on line 172.
+ 1 SYSTEMPATH\Controller.php(172): CodeIgniter\Validation\Exceptions\ValidationException::forRuleNotFound('ArrayArray')
+ 2 SYSTEMPATH\Controller.php(138): CodeIgniter\Controller->setValidator('ArrayArray', [])
+ 3 ROOTPATH\modules\Auth\Controllers\Login.php(37): CodeIgniter\Controller->validate('ArrayArray')
+ 4 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Login->doLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Login))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-26 15:18:23 --> Use of undefined constant user - assumed 'user' (this will throw an Error in a future version of PHP)
+in APPPATH\Validation\UserRules.php on line 11.
+ 1 APPPATH\Validation\UserRules.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant user - assumed \'user\' (this will throw an Error in a future version of PHP)', 'APPPATH\\Validation\\UserRules.php', 11, [...])
+ 2 SYSTEMPATH\Validation\Validation.php(312): App\validation\UserRules->validateUser('123456446', 'email,password', [...], null, 'password')
+ 3 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('password', 'password', '123456446', [...], [...])
+ 4 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 5 ROOTPATH\modules\Auth\Controllers\Login.php(37): CodeIgniter\Controller->validate([...], [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Login->doLogin()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

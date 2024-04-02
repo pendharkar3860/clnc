@@ -1,0 +1,46 @@
+CRITICAL - 2023-10-02 02:33:59 --> Call to undefined function Modules\Auth\Controllers\encrypt()
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 02:41:00 --> syntax error, unexpected '->' (T_OBJECT_OPERATOR), expecting ']'
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 50.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\modules\\Auth\\Controllers\\Registration.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Auth\\Controllers\\Registration')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Auth\\Controllers\\Registration')
+ 4 [internal function]: spl_autoload_call('Modules\\Auth\\Controllers\\Registration')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\Modules\\Auth\\Controllers\\Registration', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 02:41:31 --> Class 'Modules\Auth\Controllers\Encryption' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 16:58:56 --> Call to a member function encrypt() on null
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 17:00:05 --> Call to a member function encrypt() on null
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 17:00:13 --> Call to a member function encrypt() on null
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-10-02 17:01:07 --> Call to a member function encrypt() on null
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

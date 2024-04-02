@@ -1,0 +1,113 @@
+CRITICAL - 2023-04-02 12:15:51 --> Call to a member function last_query() on null
+in ROOTPATH\modules\Auth\Controllers\Login.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Login->doLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 12:16:18 --> Call to undefined method App\Models\UserModel::last_query
+in SYSTEMPATH\Model.php on line 842.
+ 1 ROOTPATH\modules\Auth\Controllers\Login.php(49): CodeIgniter\Model->__call('last_query', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Login->doLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 12:18:55 --> Call to a member function error() on null
+in ROOTPATH\modules\Auth\Controllers\Login.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Login->doLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 12:30:17 --> Object of class CodeIgniter\Database\MySQLi\Connection could not be converted to string
+in ROOTPATH\modules\Auth\Controllers\Login.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Login->doLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 12:30:50 --> Too few arguments to function CodeIgniter\Database\BaseConnection::query(), 0 passed in E:\wamp\www\clnc\modules\Auth\Controllers\Login.php on line 50 and at least 1 expected
+in SYSTEMPATH\Database\BaseConnection.php on line 568.
+ 1 ROOTPATH\modules\Auth\Controllers\Login.php(50): CodeIgniter\Database\BaseConnection->query()
+ 2 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Login->doLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 12:31:28 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::last_query()
+in ROOTPATH\modules\Auth\Controllers\Login.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Login->doLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 12:33:53 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::last_query()
+in ROOTPATH\modules\Auth\Controllers\Login.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Login->doLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 12:46:05 --> syntax error, unexpected ''pendharkar3860@gmail.com'' (T_CONSTANT_ENCAPSED_STRING)
+in ROOTPATH\modules\Auth\Controllers\Login.php on line 50.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\modules\\Auth\\Controllers\\Login.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Auth\\Controllers\\Login')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Auth\\Controllers\\Login')
+ 4 [internal function]: spl_autoload_call('Modules\\Auth\\Controllers\\Login')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\Modules\\Auth\\Controllers\\Login', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 12:46:15 --> syntax error, unexpected '''' (T_CONSTANT_ENCAPSED_STRING)
+in ROOTPATH\modules\Auth\Controllers\Login.php on line 50.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\modules\\Auth\\Controllers\\Login.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Auth\\Controllers\\Login')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Auth\\Controllers\\Login')
+ 4 [internal function]: spl_autoload_call('Modules\\Auth\\Controllers\\Login')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\Modules\\Auth\\Controllers\\Login', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 12:46:26 --> syntax error, unexpected '''' (T_CONSTANT_ENCAPSED_STRING)
+in ROOTPATH\modules\Auth\Controllers\Login.php on line 50.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\modules\\Auth\\Controllers\\Login.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Auth\\Controllers\\Login')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Auth\\Controllers\\Login')
+ 4 [internal function]: spl_autoload_call('Modules\\Auth\\Controllers\\Login')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\Modules\\Auth\\Controllers\\Login', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 12:52:47 --> Call to undefined method Modules\Admin\Controllers\Dashboard::session()
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 13:00:00 --> Call to a member function library() on null
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 13:02:37 --> Function name must be a string
+in ROOTPATH\modules\Auth\Controllers\Login.php on line 81.
+ 1 ROOTPATH\modules\Auth\Controllers\Login.php(56): Modules\Auth\Controllers\Login->setUserMethod(null)
+ 2 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Login->doLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 13:03:08 --> Call to undefined method Modules\Auth\Controllers\Login::session()
+in ROOTPATH\modules\Auth\Controllers\Login.php on line 81.
+ 1 ROOTPATH\modules\Auth\Controllers\Login.php(56): Modules\Auth\Controllers\Login->setUserMethod(null)
+ 2 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Login->doLogin()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 13:11:53 --> Use of undefined constant userdata - assumed 'userdata' (this will throw an Error in a future version of PHP)
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 16.
+ 1 ROOTPATH\modules\Admin\Controllers\dashboard.php(16): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Use of undefined constant userdata - assumed \'userdata\' (this will throw an Error in a future version of PHP)', 'ROOTPATH\\modules\\Admin\\Controllers\\dashboard.php', 16, [...])
+ 2 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Dashboard->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-04-02 13:12:06 --> Function name must be a string
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 16.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Dashboard->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Dashboard))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

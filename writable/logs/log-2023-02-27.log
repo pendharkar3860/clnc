@@ -1,0 +1,30 @@
+CRITICAL - 2023-02-27 17:35:14 --> Invalid file: "modules\uesrs\view\indexuser.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('modules\\uesrs\\view\\indexuser.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('modules\\uesrs\\view\\indexuser', [], true)
+ 3 ROOTPATH\modules\Users\Controllers\Users.php(11): view('modules\\uesrs\\view\\indexuser')
+ 4 SYSTEMPATH\CodeIgniter.php(934): Modules\Users\Controllers\Users->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Users\Controllers\Users))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-27 17:36:16 --> Invalid file: "Modules\Users\Views\IndexUser.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Modules\\Users\\Views\\IndexUser.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Modules\\Users\\Views\\IndexUser', [], true)
+ 3 ROOTPATH\modules\Users\Controllers\Users.php(11): view('Modules\\Users\\Views\\IndexUser')
+ 4 SYSTEMPATH\CodeIgniter.php(934): Modules\Users\Controllers\Users->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Users\Controllers\Users))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-27 17:36:18 --> Invalid file: "Modules\Users\Views\IndexUser.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('Modules\\Users\\Views\\IndexUser.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Modules\\Users\\Views\\IndexUser', [], true)
+ 3 ROOTPATH\modules\Users\Controllers\Users.php(11): view('Modules\\Users\\Views\\IndexUser')
+ 4 SYSTEMPATH\CodeIgniter.php(934): Modules\Users\Controllers\Users->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Users\Controllers\Users))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')

@@ -1,0 +1,166 @@
+CRITICAL - 2023-03-23 16:44:47 --> syntax error, unexpected '}', expecting end of file
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 46.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\modules\\Auth\\Controllers\\Registration.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Auth\\Controllers\\Registration')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Auth\\Controllers\\Registration')
+ 4 [internal function]: spl_autoload_call('Modules\\Auth\\Controllers\\Registration')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\Modules\\Auth\\Controllers\\Registration', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 16:45:23 --> Invalid file: "signup.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('signup', [], true)
+ 3 ROOTPATH\modules\Auth\Controllers\Registration.php(40): view('signup', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 16:45:57 --> Invalid file: "signup.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('signup', [], true)
+ 3 ROOTPATH\modules\Auth\Controllers\Registration.php(43): view('signup', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 16:48:50 --> Invalid file: "signup.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('signup', [], true)
+ 3 ROOTPATH\modules\Auth\Controllers\Registration.php(43): view('signup', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 16:49:12 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 16:49:17 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 16:57:01 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 16:57:14 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 16:58:39 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 16:58:43 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 16:58:49 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 17:00:09 --> Invalid file: "signup.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('signup', [], true)
+ 3 ROOTPATH\modules\Auth\Controllers\Registration.php(42): view('signup', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 17:00:10 --> Invalid file: "signup.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('signup', [], true)
+ 3 ROOTPATH\modules\Auth\Controllers\Registration.php(42): view('signup', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 17:00:12 --> Invalid file: "signup.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('signup.php')
+ 2 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('signup', [], true)
+ 3 ROOTPATH\modules\Auth\Controllers\Registration.php(42): view('signup', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 17:00:53 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 17:01:10 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 17:01:10 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 17:01:11 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 17:05:28 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 17:05:29 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 17:05:31 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 17:07:00 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 17:07:04 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-03-23 17:07:19 --> Class 'Modules\Auth\Models\UserModel' not found
+in ROOTPATH\modules\Auth\Controllers\Registration.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
