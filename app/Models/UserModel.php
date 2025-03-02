@@ -6,7 +6,7 @@ namespace App\Models;
     {        
         protected $table = 'user';
         protected $primaryKey = 'userid';
-        protected $allowedFields=['username','email','password','created_at'];
+        protected $allowedFields=['userid', 'uesrtypeid', 'parentid', 'username', 'password', 'email', 'language_id', 'created_by', 'created_at', 'updated_by', 'updated_at', 'deleted_at', 'last_access', 'is_active', 'is_locked', 'is_deleted', 'is_test', 'login_ip', 'Column 20', 'requires_new_password'];
 
 
         protected function beforeInsert(array $data)
@@ -25,6 +25,25 @@ namespace App\Models;
             if(!isset($data['data']['password']))
             $data['data']['password']=password_hash($data['data']['password'].PASSWORD_DEFAULT);
         }
+        public function GetUserDetail($id)
+        {                                   
+            $this->select('u.*,ud.firstname,ud.lastname,ud.mobile');
+            $this->from('user as u');
+            $this->join('userdetail as ud','ud.userid=u.userid','left');
+            $this->where("u.userid",$id);
+            return $this->get()->getResult();
+        }
+        public function UpdatePassword($id=0,$data="")
+        {      
+            print_r($data);
+            if($id>0)
+            {
+                $this->db->where('userid', $id);
+                $this->db->update('user', $data);
+            }
+            exit;
+        }
+        
     }
 
 ?>

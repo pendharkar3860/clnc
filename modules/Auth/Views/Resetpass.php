@@ -1,82 +1,57 @@
-<div class="authentication-wrapper authentication-basic container-p-y">
-        <div class="authentication-inner">
-          <!-- Register Card -->
-          <div class="card">
-            <div class="card-body">
-              <!-- Logo -->
-              <div class="app-brand justify-content-center">
-                <a href="index.html" class="app-brand-link gap-2">
-                  <span class="app-brand-logo demo">
-                    
-                  </span>
-                  <span class="app-brand-text demo text-body fw-bolder">ResetPassword</span>
-                </a>
-              </div>
-              <!-- /Logo -->
-              <h4 class="mb-2">Adventure starts here 🚀</h4>
-              <p class="mb-4">Make your app management easy and fun!</p>
-              <?php if(isset($validation)): ?>
-                    <div class="col-12">
-                        <div class="alert alert-danger" role="alert">
-                            <?php echo $validation->listErrors();?>
-                        </div>
-                    </div>    
-              <?php endif;?>
-              <form action="<?php echo base_url('registration/createlogin'); ?>" id="formAuthentication" class="mb-3" action="index.html" method="POST">
-                <div class="mb-3">
-                  <label for="username" class="form-label">Username</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="username"
-                    name="username" 
-                    placeholder="Enter your username"
-                    autofocus
-                  />
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Email</label>
-                  <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email" />
-                </div>
-                <div class="mb-3 form-password-toggle">
-                  <label class="form-label" for="password">Password</label>
-                  <div class="input-group input-group-merge">
-                    <input
-                      type="password"
-                      id="password"
-                      class="form-control"
-                      name="password"
-                      placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                      aria-describedby="password"
-                    />
-                    <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
-                  </div>
-                </div>
-                <div class="mb-3">
-                  <label for="email" class="form-label">Confirm Password</label>
-                  <input type="text" class="form-control" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" />
-                </div>
+<div class="row justify-content-center">
+  <div class="col-lg-8">
+     <?php if(session()->get('success')): ?>
+        <div class="alert alert-success" role="alert"><?php echo session()->get('success');?></div>
+    <?php endif;?>
 
-                <div class="mb-3">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" />
-                    <label class="form-check-label" for="terms-conditions">
-                      I agree to
-                      <a href="javascript:void(0);">privacy policy & terms</a>
-                    </label>
-                  </div>
-                </div>
-                <button class="btn btn-primary d-grid w-100">Sign up</button>
-              </form>
+    <?php if(isset($validation)): ?>
+        <div class="alert alert-danger" role="alert"><?php echo $validation->listErrors();?></div>
+    <?php endif;?>
 
-              <p class="text-center">
-                <span>Already have an account?</span>
-                <a href="auth-login-basic.html">
-                  <span>Sign in instead</span>
-                </a>
-              </p>
+    <div class="card-group d-block d-md-flex row">
+      <div class="card col-md-7 p-4 mb-0">
+        <form action="<?php echo base_url('login/setpassowrd'); ?>" id="formAuthentication" class="mb-3"  method="POST">  
+        <div class="card-body">
+            
+            <h1>Reset Password</h1>
+            <p class="text-medium-emphasis">Set your password <?php echo $resetuserid;?></p>
+            
+            <input class="form-control" id="userid" name="userid" type="hidden" placeholder="id" value="<?php echo $userid; ?>">
+            
+            <div class="input-group mb-3"><span class="input-group-text">
+                <svg class="icon">
+                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
+                </svg></span>
+              <input class="form-control" id="password" name="password" type="text" placeholder="Password">
             </div>
+            <div class="input-group mb-3"><span class="input-group-text">
+                <svg class="icon">
+                  <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
+                </svg></span>
+              <input class="form-control" id="confirmpassword" name="confirmpassword" type="text" placeholder="Confirm Password">
+            </div>
+            <div class="row">
+              <div class="col-6">
+                <button class="btn btn-primary px-4" type="submit">Update Password</button>
+              </div>
+              <div class="col-6 text-end">
+
+              </div>
+            </div>
+        </div>
+        </form>
+      </div>
+      <div class="card col-md-5 text-white bg-primary py-5">
+        <div class="card-body text-center">
+          <div>
+            <h2>Login</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <a href="<?php echo base_url();?>login">                   
+                <button class="btn btn-lg btn-outline-light mt-3" type="button">Login Now!</button>
+            </a>
           </div>
-          <!-- Register Card -->
         </div>
       </div>
+    </div>
+  </div>
+</div>

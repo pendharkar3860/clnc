@@ -76,8 +76,8 @@
                             $session->setFlashdata('msg', 'Email not Found');
                             return redirect()->to('/login');
                         }
-
-
+                        
+                                                
                     }
                     
                 }
@@ -91,6 +91,49 @@
                 throw new \RuntimeException($e->getMessage(), $e->getCode(), $e);
             }
                
+        }
+        public function setPassword()
+        {            
+         try 
+            {
+                $data=[];
+                helper(['form']);
+                $encrypter = service('encrypter');                                
+                if($this->request->getMethod()=='post')
+                {     
+                    
+                $rules = [                        
+                        'password'=> 'required|min_length[8]|max_length[50]',
+                        'confirmpassword'=> 'matches[password]'
+                    ];                    
+                    if(!$this->validate($rules))
+                    {                             
+                        $data['validation']=$this->validator; 
+                        
+                    }                                     
+                    else
+                    {
+                        $psw="";                        
+                        $psw=password_hash($this->request->getVar('password'), PASSWORD_DEFAULT);
+                        
+                        $userid=$this->request->getVar('userid');
+                        $newData=[                                                     
+                          'password'=>$psw,
+                          'updated_at'=>date('y-m-d H:i:s')   
+                        ];
+                       
+                        $usermodel = new UserModel();
+                        $usermodel->update($userid, $newData);              
+                    } 
+                }
+                    echo view('Modules\Auth\Views\Layout\header',$data);
+                    echo view('Modules\Auth\Views\resetpass',$data);
+                    echo view('Modules\Auth\Views\Layout\footer');         
+            }
+            catch (\CodeIgniter\UnknownFileException $e) 
+            {
+                throw new \RuntimeException($e->getMessage(), $e->getCode(), $e);
+            }
         }
         private function setUserMethod($user)
         {

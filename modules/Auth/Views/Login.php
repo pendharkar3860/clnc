@@ -14,7 +14,7 @@
             <div class="card-group d-block d-md-flex row">
               
                   <div class="card col-md-7 p-4 mb-0">
-                  <form action="<?php echo base_url('login/doLogin'); ?>" id="formAuthentication" class="mb-3" action="index.html" method="POST">
+                  <form action="<?php echo base_url('login/doLogin'); ?>" id="formAuthentication" class="mb-3" method="POST">
                     <div class="card-body">
                       <h1>Login</h1>
                       <p class="text-medium-emphasis">Sign In to your account</p>
@@ -22,7 +22,7 @@
                           <svg class="icon">
                             <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
                           </svg></span>
-                        <input class="form-control" type="text" placeholder="Username" name="email">
+                        <input class="form-control" type="text" placeholder="Email" name="email">
                       </div>
                       <div class="input-group mb-4"><span class="input-group-text">
                           <svg class="icon">
@@ -35,7 +35,7 @@
                           <button class="btn btn-primary px-4" type="submit">Login</button>
                         </div>
                         <div class="col-6 text-end">    
-                        	<a href="<?php echo base_url();?>forgotpassword">                   
+                        	<a href="<?php echo base_url();?>forgotpassword/0">                   
                           		<button class="btn btn-link px-0" type="button">Forgot password?</button>   
                           	</a>                       
                         </div>
