@@ -8,13 +8,14 @@
  */
 
 // Disable the on-canvas tooltip
+/*
 Chart.defaults.pointHitDetectionRadius = 1
 Chart.defaults.plugins.tooltip.enabled = false
 Chart.defaults.plugins.tooltip.mode = 'index'
 Chart.defaults.plugins.tooltip.position = 'nearest'
 Chart.defaults.plugins.tooltip.external = coreui.ChartJS.customTooltips
 Chart.defaults.defaultFontColor = '#646470'
-
+*/
 const random = (min, max) =>
   // eslint-disable-next-line no-mixed-operators
   Math.floor(Math.random() * (max - min + 1) + min)

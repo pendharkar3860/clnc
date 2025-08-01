@@ -10,11 +10,12 @@ class UserdetailModel extends Model
     protected $db;
     protected $protectedFields=false;
     
-    protected $allowedFields=["firstname","lastname","mobile","address1"];
+    protected $allowedFields=["userid","firstname","lastname","mobile","address1","address2","education","birthdate","age","workingskill","roll","city","state","zip","dt_ins","dt_upd"];
     public function test($tet="")
     {
         echo "insert data print";
     }
+    
 }
 
 ?>

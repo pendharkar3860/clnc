@@ -49,11 +49,11 @@
                         
                         $newData=   [
                             'username'=>$this->request->getVar('username'),
+                            'usertypeid'=>'1',
                             'email'=>$this->request->getVar('email'),                            
                             'password'=>$password,                                                        
                         ];
-                        //print_r($newData);
-                     
+                        
                         $model=new UserModel();
                         $model->save($newData);
                         $session =session();

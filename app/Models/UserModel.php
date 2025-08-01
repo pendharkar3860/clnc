@@ -1,5 +1,5 @@
 <?php
-namespace App\Models;
+    namespace App\Models;
     use CodeIgniter\Model;
 
     class UserModel extends Model
@@ -33,6 +33,7 @@ namespace App\Models;
             $this->where("u.userid",$id);
             return $this->get()->getResult();
         }
+        
         public function UpdatePassword($id=0,$data="")
         {      
             print_r($data);

@@ -3,7 +3,7 @@ namespace Modules\Admin\Controllers;
 use Modules\Admin\Models\UserdetailModel;
 use App\Models\UserModel;
 use App\Models\FirmModel;
-class Profile extends \CodeIgniter\Controller
+class Customer extends \CodeIgniter\Controller
 {    
     public $objsession="";
     function __construct()
@@ -11,23 +11,20 @@ class Profile extends \CodeIgniter\Controller
         $this->objsession = \Config\Services::session($config);
         $this->objfirm = new FirmModel(); 
         $this->objuserdetail = new UserdetailModel();
-         $this->objuser = new UserModel();
+        $this->objuser = new UserModel();
     }
     public function index()
     {        
         if ($this->objsession->get('isLoggedIn')==1)
-        {           
+        {                       
             $userid=$this->objsession->get('userid');
-            $data=["userid"=>$userid];
-            
-                     
-            $userdata = $this->objuserdetail->where('userid', $userid)->first();                       
-            $data=["userid"=>$userid,"userdata"=>$userdata,"page"=>"Profile"];
-            
+            $data=["userid"=>$userid];                                                                   
+            $data=["userid"=>$userid,"page"=>"Customer"];
+                        
             echo view('Modules\Admin\Views\Layout\header',$data);
             echo view('Modules\Admin\Views\Layout\sidebar',$data);
             echo view('Modules\Admin\Views\Layout\navbar',$data);
-            echo view('Modules\Admin\Views\profile',$data);
+            echo view('Modules\Admin\Views\customerview',$data);
             echo view('Modules\Admin\Views\Layout\footer',$data);            
         }
         else

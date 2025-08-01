@@ -17,7 +17,15 @@ $routes->get('admin/section/update/(:num)', '\Modules\Admin\Controllers\Section:
 $routes->get('login', '\Modules\Auth\Controllers\Login::index');
 $routes->get('login/logout', '\Modules\Auth\Controllers\Login::DoLogout');
 $routes->get('admin/firm', '\Modules\Admin\Controllers\Firm');
+$routes->post('admin/firm/insert', '\Modules\Admin\Controllers\Firm::CreateFirm');
+$routes->post('admin/firm/update', '\Modules\Admin\Controllers\Firm::UpdateFirm');
+
+$routes->post('admin/profile/insert', '\Modules\Admin\Controllers\Profile::CreateProfile');
+$routes->post('admin/profile/update', '\Modules\Admin\Controllers\Profile::Updateprofile');
+
+
 $routes->get('admin/profile', '\Modules\Admin\Controllers\Profile');
 $routes->post('admin/profile/update/(:num)', '\Modules\Admin\Controllers\Profile::updateprofile/$1');
+$routes->get('admin/customer', '\Modules\Admin\Controllers\customer');
 
 ?>

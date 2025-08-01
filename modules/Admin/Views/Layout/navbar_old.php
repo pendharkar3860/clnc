@@ -51,10 +51,10 @@
                   </svg> Comments<span class="badge badge-sm bg-warning ms-2">42</span></a>
                 <div class="dropdown-header bg-light py-2">
                   <div class="fw-semibold">Settings</div>
-                </div><a class="dropdown-item" href="<?php echo base_url('admin/profile');?>">
+                </div><a class="dropdown-item" href="#">
                   <svg class="icon me-2">
                     <use xlink:href="<?php echo base_url('modules/common/theme/coreui/dist/vendors/@coreui/icons/svg/free.svg#cil-user');?>"></use>
-                  </svg> Profile1</a><a class="dropdown-item" href="<?php echo base_url('admin/profile');?>">
+                  </svg> Profile</a><a class="dropdown-item" href="#">
                   <svg class="icon me-2">
                     <use xlink:href="<?php echo base_url('modules/common/theme/coreui/dist/vendors/@coreui/icons/svg/free.svg#cil-settings');?>"></use>
                   </svg> Settings</a><a class="dropdown-item" href="#">
@@ -85,5 +85,5 @@
           </nav>
         </div>
       </header>
-    <div class="body flex-grow-1 px-3"><!--CLOSE IN FOOTER-->
-        <div class="container-lg"><!--CLOSE IN FOOTER-->
+     <div class="body flex-grow-1 px-3">
+        <div class="container-lg">

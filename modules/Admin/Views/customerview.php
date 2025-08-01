@@ -25,18 +25,18 @@
 <div class="row">     
     <div class="col-12">
       <div class="card mb-4">
-          <div class="card-header"><strong>Profile</strong></div>
+          <div class="card-header"><strong>Customer</strong></div>
         <div class="card-body">
           <?php 
             if(isset($userdata) && !empty([$userdata])){ 
-                $userdetailid=$userdata['userdetailid'];
+                $customerid=$userdata['userdetailid'];
                 ?>
-            <p class="text-medium-emphasis small"><b>Hello <?php echo $userdata['firstname']." ".$userdata['lastname'];?>  Update your Profile</b>  </p>
+            <p class="text-medium-emphasis small"><b>Update Customer</b>  </p>
           <?php }else{
                 
                 $userdetailid=0;
               ?>
-            <p class="text-medium-emphasis small"><b>Hello Please Create your Profile</b>  </p>
+            <p class="text-medium-emphasis small"><b>Add Customer</b>  </p>
           <?php }?>
             <div class="tab-content rounded-bottom">
                 <?php if(isset($validation)): ?>
@@ -46,9 +46,10 @@
                        <div class="alert alert-success" role="alert"><?php echo session()->get('success');?></div>
                        <?php endif;?>   
               <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1003">
-                <form action="<?php echo ($userdetailid>0)? base_url('admin/profile/update'):base_url('admin/profile/insert'); ?>" method="POST" class="row g-3">
-                    <input class="form-control" name="userid" id="userid" type="hidden" value="<?php echo $userdata['userid'];?>">
-                    <input class="form-control" name="userdetailid" id="userdetailid" type="hidden" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['userdetailid']: "0"; ?>" >
+                <form action="<?php echo ($customerid>0)? base_url('admin/profile/update'):base_url('admin/profile/insert'); ?>" method="POST" class="row g-3">
+                    
+                    <input class="form-control" name="customerid" id="customerid" type="hidden" value="<?php echo $userdata['userid'];?>">
+                    <input class="form-control" name="customerdetailid" id="customerdetailid" type="hidden" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['userdetailid']: "0"; ?>" >
                     <div class="col-md-6">
                       <label class="form-label" for="firstname">First Name</label>
                       <input class="form-control" name="firstname" id="firstname" type="text" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['firstname']: ""; ?>" required>
@@ -103,9 +104,8 @@
                     <label class="form-label" for="zip">Zip</label>
                     <input class="form-control" name="zip" id="zip" type="number" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['zip']: ""; ?>">
                   </div>
-                   <?php if(isset($userdata) && !empty([$userdata])){ ?>
-                  <div class="col-12">
-                    
+                   <?php if(isset($userdata) && !empty([$userdata])){ print_r($userdata); ?>
+                  <div class="col-12">                    
                     <button class="btn btn-primary btn-lg" type="submit">update</button>
                   </div>
                    <?php }else{?>

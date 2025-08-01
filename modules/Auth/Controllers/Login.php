@@ -5,6 +5,7 @@
 
     namespace Modules\Auth\Controllers;
     use App\Models\UserModel;
+    use App\Models\FirmModel;
     class Login extends \CodeIgniter\Controller
     {
         function __construct()
@@ -18,6 +19,8 @@
             $session->remove('userid');
             $session->remove('email');
             $session->remove('isLoggedIn');
+            $session->remove('uesrtypeid');
+            
             
             echo view('Modules\Auth\Views\Layout\header');
             echo view('Modules\Auth\Views\Login');
@@ -56,21 +59,31 @@
                         
                         $session = session();
                         $model = new UserModel();
+                        $firmmodel=new FirmModel();
                         $email = $this->request->getVar('email');
                         $password = $this->request->getVar('password');
 
-                        $data = $model->where('email', $email)->where('is_deleted','N')->first();
-
-                        if($data){
-                            
-                                $ses_data = [
-                                    'userid'       => $data['userid'],
-                                    'username'     => $data['username'],
-                                    'email'    => $data['email'],
-                                    'isLoggedIn'     => TRUE
-                                ];
-                                $session->set($ses_data);
-                                return redirect()->to('/admin/dashboard');
+                        $data = $model->where('email', $email)->where('is_deleted','N')->first();                        
+                        $firmdata="";
+                       
+                        if($data)
+                        {                                                       
+                            $firmdata=$firmmodel->where('userid',$data['userid'])->first();                              
+                            $firmid=0;
+                            if($firmdata)
+                            {
+                                $firmid=$firmdata['firmid'];
+                            }
+                            $ses_data = [
+                                'userid'       => $data['userid'],
+                                'uesrtypeid'       => $data['uesrtypeid'],
+                                'firmid'       => $firmid,
+                                'username'     => $data['username'],
+                                'email'    => $data['email'],
+                                'isLoggedIn'     => TRUE
+                            ];
+                            $session->set($ses_data);
+                            return redirect()->to('/admin/dashboard');
                         }else{
                             
                             $session->setFlashdata('msg', 'Email not Found');
