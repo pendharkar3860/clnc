@@ -1,0 +1,95 @@
+CRITICAL - 2025-09-03 12:18:10 --> Call to a member function get() on string
+in ROOTPATH\modules\Admin\Controllers\customer.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Customer->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Customer))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 12:18:29 --> Call to a member function get() on string
+in ROOTPATH\modules\Admin\Controllers\customer.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Customer->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Customer))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 12:19:53 --> Call to a member function get() on string
+in ROOTPATH\modules\Admin\Controllers\customer.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Customer->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Customer))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 12:19:55 --> Call to a member function get() on string
+in ROOTPATH\modules\Admin\Controllers\customer.php on line 28.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Customer->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Customer))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 13:21:54 --> Call to a member function where() on string
+in ROOTPATH\modules\Admin\Controllers\customer.php on line 70.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Customer->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Customer))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 13:31:04 --> Call to undefined function Modules\Admin\Controllers\LoginRouting()
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 13:31:45 --> Call to undefined function Modules\Admin\Controllers\LoginRouting()
+in ROOTPATH\modules\Admin\Controllers\dashboard.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Dashboard->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 13:49:20 --> Call to undefined function emtpy()
+in ROOTPATH\modules\Admin\Views\Layout\sidebar.php on line 9.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Modules\\Admin\\Views\\Layout\\sidebar', [], true)
+ 4 ROOTPATH\modules\Admin\Controllers\firm.php(46): view('Modules\\Admin\\Views\\Layout\\sidebar', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Firm->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Firm))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 13:53:43 --> Illegal string offset 'firmname'
+in ROOTPATH\modules\Admin\Views\Layout\sidebar.php on line 11.
+ 1 ROOTPATH\modules\Admin\Views\Layout\sidebar.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'firmname\'', 'ROOTPATH\\modules\\Admin\\Views\\Layout\\sidebar.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('ROOTPATH\\modules\\Admin\\Views\\Layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Modules\\Admin\\Views\\Layout\\sidebar', [], true)
+ 5 ROOTPATH\modules\Admin\Controllers\firm.php(46): view('Modules\\Admin\\Views\\Layout\\sidebar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Firm->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Firm))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 13:54:57 --> Illegal string offset 'firmname'
+in ROOTPATH\modules\Admin\Views\Layout\sidebar.php on line 11.
+ 1 ROOTPATH\modules\Admin\Views\Layout\sidebar.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'firmname\'', 'ROOTPATH\\modules\\Admin\\Views\\Layout\\sidebar.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('ROOTPATH\\modules\\Admin\\Views\\Layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Modules\\Admin\\Views\\Layout\\sidebar', [], true)
+ 5 ROOTPATH\modules\Admin\Controllers\firm.php(46): view('Modules\\Admin\\Views\\Layout\\sidebar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Firm->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Firm))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 13:55:10 --> Illegal string offset 'firmname'
+in ROOTPATH\modules\Admin\Views\Layout\sidebar.php on line 11.
+ 1 ROOTPATH\modules\Admin\Views\Layout\sidebar.php(11): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Illegal string offset \'firmname\'', 'ROOTPATH\\modules\\Admin\\Views\\Layout\\sidebar.php', 11, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('ROOTPATH\\modules\\Admin\\Views\\Layout\\sidebar.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Modules\\Admin\\Views\\Layout\\sidebar', [], true)
+ 5 ROOTPATH\modules\Admin\Controllers\firm.php(46): view('Modules\\Admin\\Views\\Layout\\sidebar', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Firm->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Firm))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-09-03 14:01:12 --> Call to undefined function emtpy()
+in ROOTPATH\modules\Admin\Views\Layout\sidebar.php on line 11.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Modules\\Admin\\Views\\Layout\\sidebar', [], true)
+ 4 ROOTPATH\modules\Admin\Controllers\firm.php(46): view('Modules\\Admin\\Views\\Layout\\sidebar', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Firm->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Firm))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

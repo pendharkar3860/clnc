@@ -1,0 +1,12 @@
+CRITICAL - 2025-08-04 04:14:51 --> Class 'Modules\Admin\Controllers\CustomerModelModel' not found
+in ROOTPATH\modules\Admin\Controllers\customer.php on line 13.
+ 1 SYSTEMPATH\CodeIgniter.php(906): Modules\Admin\Controllers\Customer->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-04 04:21:16 --> Call to a member function GetUserDetail() on null
+in ROOTPATH\modules\Admin\Controllers\customer.php on line 39.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Customer->CreateCustomer()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Customer))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

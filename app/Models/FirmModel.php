@@ -5,7 +5,7 @@ namespace App\Models;
     {        
         protected $table = 'firm_master';
         protected $primaryKey = 'firmid';
-        protected $allowedFields=['firmid','userid','firmname','mobile','email','firmactivity','firmdealing','address1','address2','city','state','zip','dt_ins','dt_upd','is_deleted','status'	];
+        protected $allowedFields=['firmid','userid','firmname','firmmobile','firmemail','firmactivity','firmdealing','firmaddress1','firmaddress2','firmcity','firmstate','firmzip','dt_ins','dt_upd','is_deleted','status'];
                
         public function GetFirmDetail($id)
         {                                   

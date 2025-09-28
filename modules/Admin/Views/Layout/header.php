@@ -5,7 +5,7 @@
 * Copyright (c) 2023 creativeLabs Łukasz Holeczek
 * Licensed under MIT (https://github.com/coreui/coreui-free-bootstrap-admin-template/blob/main/LICENSE)
 --><!-- Breadcrumb-->
-<html lang="en">
+<html lang="en" data-coreui-theme="dark">
     <head>
     <base href="./">
     <meta charset="utf-8">
@@ -15,6 +15,7 @@
     <meta name="author" content="Łukasz Holeczek">
     <meta name="keyword" content="Bootstrap,Admin,Template,Open,Source,jQuery,CSS,HTML,RWD,Dashboard">
     <title>Shivam Service Managment org</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <link rel="apple-touch-icon" sizes="57x57" href="href="<?php echo base_url('modules/common/theme/coreui/dist/favicon/apple-icon-57x57.png');?>"
     <link rel="apple-touch-icon" sizes="60x60" href="href="<?php echo base_url('modules/common/theme/coreui/dist/favicon/apple-icon-60x60.png');?>"
     <link rel="apple-touch-icon" sizes="72x72" href="href="<?php echo base_url('modules/common/theme/coreui/dist/favicon/apple-icon-72x72.png');?>"
@@ -43,12 +44,13 @@
     <link href="<?php echo base_url('modules/common/theme/coreui/dist/css/style.css');?>" rel="stylesheet">
     <!-- We use those styles to show code examples, you should remove them in your application.-->
     <!--
-    <link href="<?php echo base_url('modules/common/theme/coreui/dist/css/examples.css');?>" rel="stylesheet">
-    <link href="<?php echo base_url('modules/common/theme/coreui/dist/vendors/@coreui/chartjs/css/coreui-chartjs.css');?>" rel="stylesheet">
+    <link href="<?php //echo base_url('modules/common/theme/coreui/dist/css/examples.css');?>" rel="stylesheet">
+    <link href="<?php //echo base_url('modules/common/theme/coreui/dist/vendors/@coreui/chartjs/css/coreui-chartjs.css');?>" rel="stylesheet">
     -->
     
+
    
    
   </head>
   <body>
-      
+ 

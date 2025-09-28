@@ -1,0 +1,21 @@
+CRITICAL - 2025-08-05 14:44:45 --> A non-numeric value encountered
+in ROOTPATH\modules\Admin\Views\customerlistview.php on line 84.
+ 1 ROOTPATH\modules\Admin\Views\customerlistview.php(84): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'ROOTPATH\\modules\\Admin\\Views\\customerlistview.php', 84, [...])
+ 2 SYSTEMPATH\View\View.php(213): include('ROOTPATH\\modules\\Admin\\Views\\customerlistview.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Modules\\Admin\\Views\\customerlistview', [], true)
+ 5 ROOTPATH\modules\Admin\Controllers\customer.php(37): view('Modules\\Admin\\Views\\customerlistview', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Customer->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Customer))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-05 14:45:33 --> Cannot use object of type CodeIgniter\Pager\Pager as array
+in ROOTPATH\modules\Admin\Views\customerlistview.php on line 85.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Modules\\Admin\\Views\\customerlistview', [], true)
+ 4 ROOTPATH\modules\Admin\Controllers\customer.php(37): view('Modules\\Admin\\Views\\customerlistview', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Customer->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Customer))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

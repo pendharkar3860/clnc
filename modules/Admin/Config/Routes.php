@@ -24,8 +24,20 @@ $routes->post('admin/profile/insert', '\Modules\Admin\Controllers\Profile::Creat
 $routes->post('admin/profile/update', '\Modules\Admin\Controllers\Profile::Updateprofile');
 
 
-$routes->get('admin/profile', '\Modules\Admin\Controllers\Profile');
-$routes->post('admin/profile/update/(:num)', '\Modules\Admin\Controllers\Profile::updateprofile/$1');
-$routes->get('admin/customer', '\Modules\Admin\Controllers\customer');
+$routes->get('admin/profile','\Modules\Admin\Controllers\profile');
+$routes->post('admin/profile/update/(:num)','\Modules\Admin\Controllers\Profile::updateprofile/$1');
+
+$routes->get('admin/customer','\Modules\Admin\Controllers\customer');
+$routes->post('admin/customer','\Modules\Admin\Controllers\customer');
+$routes->get('admin/customerajax','\Modules\Admin\Controllers\customerajax');
+
+$routes->get('admin/customer/(:num)', '\Modules\Admin\Controllers\Customer::index/$1');
+
+$routes->get('admin/customer/addnew', '\Modules\Admin\Controllers\customer::CustomerForm');
+$routes->post('admin/customer/insert', '\Modules\Admin\Controllers\Customer::CreateCustomer');
+$routes->post('admin/customer/update', '\Modules\Admin\Controllers\Customer::UpdateCustomer');
+$routes->get('admin/customer/details/(:num)', '\Modules\Admin\Controllers\Customer::UpdateMode/$1');
+
+$routes->get('admin/complain','\Modules\Admin\Controllers\complain');
 
 ?>

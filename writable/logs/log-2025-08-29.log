@@ -1,0 +1,31 @@
+ERROR - 2025-08-29 13:55:02 --> mysqli_sql_exception: Unknown column 'mobile' in 'where clause' in D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('SELECT 1\nFROM `...', 0)
+#1 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('SELECT 1\nFROM `...')
+#2 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT 1\nFROM `...')
+#3 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_unique('8156042542', 'mobile', Array, NULL, 'mobile')
+#6 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('mobile', 'mobile', '8156042542', Array, Array)
+#7 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 D:\wamp64\www\clnc\modules\Admin\Controllers\firm.php(81): CodeIgniter\Controller->validate(Array)
+#9 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(934): Modules\Admin\Controllers\Firm->CreateFirm()
+#10 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Firm))
+#11 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\wamp64\www\clnc\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2025-08-29 13:55:02 --> Unknown column 'mobile' in 'where clause'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `firm_master`
+WHERE `mobile` = :mobile:
+ LIMIT 1', [...], false)
+ 2 SYSTEMPATH\Validation\StrictRules\Rules.php(206): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\Validation\Validation.php(312): CodeIgniter\Validation\StrictRules\Rules->is_unique('8156042542', 'mobile', [...], null, 'mobile')
+ 4 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('mobile', 'mobile', '8156042542', [...], [...])
+ 5 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 6 ROOTPATH\modules\Admin\Controllers\firm.php(81): CodeIgniter\Controller->validate([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Firm->CreateFirm()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Firm))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

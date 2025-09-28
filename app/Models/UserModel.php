@@ -6,7 +6,7 @@
     {        
         protected $table = 'user';
         protected $primaryKey = 'userid';
-        protected $allowedFields=['userid', 'uesrtypeid', 'parentid', 'username', 'password', 'email', 'language_id', 'created_by', 'created_at', 'updated_by', 'updated_at', 'deleted_at', 'last_access', 'is_active', 'is_locked', 'is_deleted', 'is_test', 'login_ip', 'Column 20', 'requires_new_password'];
+        protected $allowedFields=['userid', 'usertypeid', 'parentid','firmid', 'username', 'password', 'email', 'language_id', 'created_by', 'created_at', 'updated_by', 'updated_at', 'deleted_at', 'last_access', 'is_active', 'is_locked', 'is_deleted', 'is_test', 'login_ip', 'Column 20', 'requires_new_password'];
 
 
         protected function beforeInsert(array $data)
@@ -36,7 +36,7 @@
         
         public function UpdatePassword($id=0,$data="")
         {      
-            print_r($data);
+           
             if($id>0)
             {
                 $this->db->where('userid', $id);

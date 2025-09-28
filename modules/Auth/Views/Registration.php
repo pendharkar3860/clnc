@@ -21,25 +21,25 @@
                           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-user"></use>
     
                         </svg></span>
-                      <input class="form-control" type="text" placeholder="Username" id="username" name="username" >
+                        <input class="form-control" type="text" placeholder="Username" id="username" name="username" value="<?php echo session()->get("username"); ?>" required >
                     </div>
                     <div class="input-group mb-3"><span class="input-group-text">
                         <svg class="icon">
                           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-envelope-open"></use>
                         </svg></span>
-                      <input class="form-control" type="text" placeholder="Email" id="email" name="email" >
+                      <input class="form-control" type="email" placeholder="Email" id="email" name="email" value="<?php echo session()->get("email"); ?>" required>
                     </div>
                     <div class="input-group mb-3"><span class="input-group-text">
                         <svg class="icon">
                           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
                         </svg></span>
-                      <input class="form-control" type="password" placeholder="Password" id="password" name="password">
+                      <input class="form-control" type="password" placeholder="Password" id="password" name="password" required>
                     </div>
                     <div class="input-group mb-4"><span class="input-group-text">
                         <svg class="icon">
                           <use xlink:href="vendors/@coreui/icons/svg/free.svg#cil-lock-locked"></use>
                         </svg></span>
-                      <input class="form-control" type="password" placeholder="Repeat password" id="confirmpassword" name="confirmpassword">
+                      <input class="form-control" type="password" placeholder="Repeat password" id="confirmpassword" name="confirmpassword" required>
                     </div>
                     <div class="row">
                        	<div class="col-6">

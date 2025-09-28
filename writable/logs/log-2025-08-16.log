@@ -1,0 +1,38 @@
+CRITICAL - 2025-08-16 10:54:14 --> syntax error, unexpected 'catch' (T_CATCH), expecting function (T_FUNCTION) or const (T_CONST)
+in ROOTPATH\modules\Admin\Controllers\customer.php on line 233.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\modules\\Admin\\Controllers\\customer.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\Controllers\\customer')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\Controllers\\customer')
+ 4 [internal function]: spl_autoload_call('Modules\\Admin\\Controllers\\customer')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\Controllers\\customer', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-16 10:58:33 --> Argument 2 passed to App\validation\CustomerRules::CustomerUniqueMobile1() must be of the type int, string given, called in D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Validation\Validation.php on line 312
+in APPPATH\Validation\CustomerRules.php on line 6.
+ 1 SYSTEMPATH\Validation\Validation.php(312): App\validation\CustomerRules->CustomerUniqueMobile1(7862925630, 'mobile1,customerid', [...], null, 'mobile1')
+ 2 SYSTEMPATH\Validation\Validation.php(170): CodeIgniter\Validation\Validation->processRules('mobile1', 'mobile1', '7862925630', [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 ROOTPATH\modules\Admin\Controllers\customer.php(202): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Customer->UpdateCustomer()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Customer))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-16 13:57:02 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+in ROOTPATH\modules\Admin\Controllers\customer.php on line 208.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Customer->UpdateCustomer()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Customer))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-16 13:57:32 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+in ROOTPATH\modules\Admin\Controllers\customer.php on line 208.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Customer->UpdateCustomer()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Customer))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-16 13:57:51 --> Object of class CodeIgniter\Validation\Validation could not be converted to string
+in ROOTPATH\modules\Admin\Controllers\customer.php on line 208.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Customer->UpdateCustomer()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Customer))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

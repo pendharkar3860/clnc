@@ -8,7 +8,17 @@ class Profile extends \CodeIgniter\Controller
     public $objsession="";
     function __construct()
     {
-        $this->objsession = \Config\Services::session($config);
+        $this->objsession = \Config\Services::session();
+        if($this->objsession->get('isLoggedIn')==0)
+        {
+           header('Location:/login');
+           exit;
+        }
+        if($this->objsession->get('firmid')==0)
+        {            
+            header('Location:/admin/firm');
+            exit;
+        }
         $this->objfirm = new FirmModel(); 
         $this->objuserdetail = new UserdetailModel();
          $this->objuser = new UserModel();
@@ -27,7 +37,7 @@ class Profile extends \CodeIgniter\Controller
             echo view('Modules\Admin\Views\Layout\header',$data);
             echo view('Modules\Admin\Views\Layout\sidebar',$data);
             echo view('Modules\Admin\Views\Layout\navbar',$data);
-            echo view('Modules\Admin\Views\profile',$data);
+            echo view('Modules\Admin\Views\Profile',$data);
             echo view('Modules\Admin\Views\Layout\footer',$data);            
         }
         else
@@ -95,7 +105,7 @@ class Profile extends \CodeIgniter\Controller
                 echo view('Modules\Admin\Views\Layout\header',$data);
                 echo view('Modules\Admin\Views\Layout\sidebar',$data);
                 echo view('Modules\Admin\Views\Layout\navbar',$data);
-                echo view('Modules\Admin\Views\profile',$data);
+                echo view('Modules\Admin\Views\Profile',$data);
                 echo view('Modules\Admin\Views\Layout\footer',$data);
             } 
             catch (\CodeIgniter\UnknownFileException $e) 

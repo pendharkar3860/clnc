@@ -19,6 +19,6 @@ $routes->post('login/authenticat', '\Modules\Auth\Controllers\Login::authenticat
 $routes->post('login/logout', '\Modules\Auth\Controllers\Login::DoLogout');
 $routes->post('login/sendforgetpasslink', '\Modules\Auth\Controllers\Resetpass::sendforgetpasslink');
 $routes->post('login/setpassowrd', '\Modules\Auth\Controllers\login::setpassword');
-
+$routes->get('activeuser/(:any)', '\Modules\Auth\Controllers\Useractivation::index/$1');
 //$routes->get('auth/login/update/(:num)', '\Modules\Admin\Controllers\Section::update/$1');
 ?>

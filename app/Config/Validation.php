@@ -7,8 +7,9 @@ use CodeIgniter\Validation\StrictRules\CreditCardRules;
 use CodeIgniter\Validation\StrictRules\FileRules;
 use CodeIgniter\Validation\StrictRules\FormatRules;
 use CodeIgniter\Validation\StrictRules\Rules;
-use App\validation\UserRules;
-use App\validation\FirmRules;
+use App\Validation\UserRules;
+use App\Validation\FirmRules;
+use App\Validation\CustomerRules;
 class Validation extends BaseConfig
 {
     // --------------------------------------------------------------------
@@ -28,7 +29,7 @@ class Validation extends BaseConfig
         CreditCardRules::class,
         UserRules::class,
         FirmRules::class,
-
+        CustomerRules::class,
     ];
 
     /**

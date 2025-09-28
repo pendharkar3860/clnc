@@ -1,43 +1,24 @@
 
 <script>
-    (function () {
-  'use strict'
-
-  // Fetch all the forms we want to apply custom Bootstrap validation styles to
-  const forms = document.querySelectorAll('.needs-validation')
-
-  // Loop over them and prevent submission
-  Array.prototype.slice.call(forms)
-    .forEach(form => {
-      form.addEventListener('submit', event => {
-          
-        if (!form.checkValidity()) {
-          event.preventDefault()
-          event.stopPropagation()
-        }
-
-        form.classList.add('was-validated')
-      }, false)
-    })
-})()
-    
+  
+ 
+function ResetSearch()
+{
+   document.getElementById("fullname").value="";
+   document.getElementById("mobile1").value="";
+   document.getElementById("mobile2").value="";
+   document.getElementById("email").value="";
+   document.getElementById("customerlistform").submit();
+   
+}
 </script>
 <div class="row">     
     <div class="col-12">
       <div class="card mb-4">
-          <div class="card-header"><strong>Customer</strong></div>
-        <div class="card-body">
-          <?php 
-            if(isset($userdata) && !empty([$userdata])){ 
-                $customerid=$userdata['userdetailid'];
-                ?>
-            <p class="text-medium-emphasis small"><b>Update Customer</b>  </p>
-          <?php }else{
-                
-                $userdetailid=0;
-              ?>
-            <p class="text-medium-emphasis small"><b>Add Customer</b>  </p>
-          <?php }?>
+          <div class="card-header"><h5>Customer</h5></div>
+                                                
+          <div class="card-body">
+         
             <div class="tab-content rounded-bottom">
                 <?php if(isset($validation)): ?>
                     <div class="alert alert-danger" role="alert"><?php echo $validation->listErrors();?></div>
@@ -45,76 +26,77 @@
                 <?php if(session()->get('success')): ?>
                        <div class="alert alert-success" role="alert"><?php echo session()->get('success');?></div>
                        <?php endif;?>   
-              <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1003">
-                <form action="<?php echo ($customerid>0)? base_url('admin/profile/update'):base_url('admin/profile/insert'); ?>" method="POST" class="row g-3">
-                    
-                    <input class="form-control" name="customerid" id="customerid" type="hidden" value="<?php echo $userdata['userid'];?>">
-                    <input class="form-control" name="customerdetailid" id="customerdetailid" type="hidden" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['userdetailid']: "0"; ?>" >
-                    <div class="col-md-6">
-                      <label class="form-label" for="firstname">First Name</label>
-                      <input class="form-control" name="firstname" id="firstname" type="text" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['firstname']: ""; ?>" required>
+                    <div class="card">
+                        <h5 class="card-header">Search List</h5>
+                        <div class="card-body">
+                          <form name="customerlistform" id="customerlistform" action="<?php echo base_url('admin/customer'); ?>" method="POST" class="row g-3">                                                                                                    
+                            <div class="col-md-4">
+                              <label class="form-label" for="fullname">Full Name</label>
+                              <input class="form-control" name="fullname" id="fullname" type="text" value="<?php echo (isset($searchdata['fullname'])&& !empty($searchdata['fullname'])?$searchdata['fullname']:""); ?>" >
+                            </div>
 
+                            <div class="col-md-2">
+                              <label class="form-label" for="mobile1">Mobile-1</label>
+                              <input class="form-control" pattern="[7896][0-9]{9}" name="mobile1" id="mobile1" type="text" value="<?php echo (isset($searchdata['searchmobile1'])&& !empty($searchdata['searchmobile1'])?$searchdata['searchmobile1']:""); ?>" >
+                            </div>
+                              <div class="col-md-2">
+                              <label class="form-label" for="mobile2">Mobile-2</label>
+                              <input class="form-control" pattern="[7896][0-9]{9}" name="mobile2" id="mobile2" type="text" value="<?php echo (isset($searchdata['searchmobile2'])&& !empty($searchdata['searchmobile2'])?$searchdata['searchmobile2']:""); ?>" >
+                            </div>
+                            <div class="col-md-4">
+                              <label class="form-label" for="email">Email</label>
+                              <input class="form-control" name="email" id="email" type="email" value="<?php echo (isset($searchdata['searchemail'])&& !empty($searchdata['searchemail'])?$searchdata['searchemail']:""); ?>" >
+                            </div>
+                              <div class="col-12" style="text-align: right;">
+                                  <button type="button" class="btn btn-primary rounded-0" onclick="ResetSearch()">ResetSearch</button>
+                                  <button class="btn btn-secondary rounded-0" type="submit">Search</button>
+                            </div>
+                            </form>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                      <label class="form-label" for="lastname">Last Name</label>
-                      <input class="form-control" name="lastname" id="lastname" type="text" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['lastname']: ""; ?>" required>
-                    </div>
-                      <div class="col-md-6">
-                      <label class="form-label" for="mobile">Mobile</label>
-                      <input class="form-control" pattern="[7896][0-9]{9}" name="mobile" id="mobile" type="text" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['mobile']: ""; ?>" required>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label" for="education">Education</label>
-                      <input class="form-control" name="education" id="education" type="text" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['education']: ""; ?>" required>
-                    </div>
-                    <div class="col-md-3">
-                        <label class="form-label" for="birthdate">Birthdate</label>                                             
-                        <input class="form-control" name="birthdate" id="birthdate" type="date" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['birthdate']: ""; ?>" required>                                            
-                    </div>                     
-             
-                    <div class="col-md-3">
-                      <label class="form-label" for="age">age</label>
-                      <input class="form-control" name="age" id="age" type="number" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['age']: ""; ?>" required>
-                    </div>
-                    <div class="col-md-3">
-                      <label class="form-label" for="workingskill">Working Skill</label>
-                      <input class="form-control" name="workingskill" id="workingskill" type="text" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['workingskill']: ""; ?>" required>
-                    </div>
-                    <div class="col-md-3">
-                      <label class="form-label" for="roll">Work AS</label>
-                      <input class="form-control" name="roll" id="roll" type="text" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['roll']: ""; ?>" required>
-                    </div>
-                    <div class="col-12">
-                      <label class="form-label" for="address1">Address 1</label>
-                      <input class="form-control" name="address1" id="address1" type="text" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['address1']: ""; ?>" required>
-                    </div>
-                    <div class="col-12">
-                      <label class="form-label" for="address2">Address 2</label>
-                      <input class="form-control" name="address2" id="address2" type="text" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['address2']: ""; ?>" required>
-                    </div>
-                    <div class="col-md-6">
-                      <label class="form-label" for="city">City</label>
-                      <input class="form-control" name="city" id="city" type="text" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['city']: ""; ?>" required>
-                    </div>
-                  <div class="col-md-4">
-                    <label class="form-label" for="state">State</label>
-                     <input class="form-control" name="state" id="state" type="text" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['state']: ""; ?>">
+                 
+                  <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1003">
                   </div>
-                  <div class="col-md-2">
-                    <label class="form-label" for="zip">Zip</label>
-                    <input class="form-control" name="zip" id="zip" type="number" value="<?php  echo (isset($userdata) && !empty($userdata))?$userdata['zip']: ""; ?>">
-                  </div>
-                   <?php if(isset($userdata) && !empty([$userdata])){ print_r($userdata); ?>
-                  <div class="col-12">                    
-                    <button class="btn btn-primary btn-lg" type="submit">update</button>
-                  </div>
-                   <?php }else{?>
-                    <div class="col-12">
-                        <button class="btn btn-success btn-lg" type="submit">Save</button>
-                    </div>
-                   <?php } ?>
-                </form>
-              </div>
+                    <div class="table-responsive-lg table-responsive-xl table-responsive-sm ">
+                      <table id="customerdatagrid" class="table table-bordered table-hover ">
+                        <thead>
+                          <tr>
+                            <th scope="col">Nos</th>
+                            <th scope="col">Customer Name</th>
+                            <th scope="col">Mobile-1</th>
+                            <th scope="col">Mobile-2</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Customer Address</th>
+                            <th scope="col">Customer Firm</th>
+                            <th scope="col">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                        <?php if(isset($customerdata) && !empty($customerdata)){?>
+                            <?php foreach ($customerdata['pagedata'] as $key => $value) {?>
+                                <tr class="datagridrow" id="dtg<?php echo $value['customerid']; ?>">
+                                <th scope="row"><?php echo $key+1;?></th>
+                                <td><?php echo $value['customername']; ?></td>
+                                <td><?php echo $value['customermobile1']; ?></td>
+                                <td><?php echo $value['customermobile2']; ?></td>
+                                <td><?php echo $value['customeremail']; ?></td>
+                                <td><?php echo $value['customeraddress']; ?></td>
+                                <td><?php echo $value['customerfirmaddress']; ?></td>
+                                <td><a class="nav-link" href="<?php echo base_url('admin/customer/details/').$value['customerid'];?>" >                                        
+                                        <img src="<?php echo base_url('modules/common/theme/coreui/src/assets/icons/pen.png')?>" alt="Update" style="position:relative;width:20px;height:20px;display:block;" />
+                                    </a>
+                                </td>
+                              </tr>
+                            <?php }?>
+                        <?php }?>
+                                
+                        </tbody>
+                      </table>
+                       <?php 
+                       echo $customerdata["pager"]->links("group1",'coreui_paggination');
+                       ?> 
+                        
+                   </div>
             </div>
           </div>
         </div>

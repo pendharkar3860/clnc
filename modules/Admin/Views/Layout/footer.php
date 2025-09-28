@@ -8,7 +8,8 @@
 
     </div><!--START FROM HEADER NAV -->
     <!-- CoreUI and necessary plugins-->
-    <script src="<?php echo base_url('modules/common/theme/coreui/dist/vendors/@coreui/coreui/js/coreui.bundle.min.js');?>"></script>
+    
+     <script src="<?php echo base_url('modules/common/theme/coreui/dist/vendors/@coreui/coreui/js/coreui.bundle.min.js');?>"></script> 
     <script src="<?php echo base_url('modules/common/theme/coreui/dist/vendors/simplebar/js/simplebar.min.js');?>"></script>
 </body>
 </html>

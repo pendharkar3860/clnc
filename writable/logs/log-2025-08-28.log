@@ -1,0 +1,6 @@
+CRITICAL - 2025-08-28 13:45:17 --> Call to a member function setFlashdata() on null
+in ROOTPATH\modules\Admin\Controllers\firm.php on line 85.
+ 1 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Firm->CreateFirm()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Firm))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

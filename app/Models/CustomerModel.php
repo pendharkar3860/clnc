@@ -7,7 +7,6 @@
         protected $table = 'customermaster';
         protected $primaryKey = 'customerid';
         protected $allowedFields=['customerid','parentid','firmid','userid','customername','customeraddress','customermobile1','customermobile2','customeremail','customerfirm','customerfirmaddress','dt_ins','dt_upd','is_deleted'];        
-        
     }
 
 ?>

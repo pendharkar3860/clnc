@@ -1,0 +1,7 @@
+CRITICAL - 2025-08-23 04:00:53 --> Call to undefined method App\Models\UserModel::affected_rows
+in SYSTEMPATH\Model.php on line 842.
+ 1 ROOTPATH\modules\Auth\Controllers\UserActivation.php(27): CodeIgniter\Model->__call('affected_rows', [])
+ 2 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\UserActivation->index('7a80db57fc4831faa2c9ff3e9d7aa8992bbb28ae0fc9e4cc818f31da3ea4935595ba4336155272c415807e54cdc9d194ec229fc86bede0afe6b00abf28e75b2b728705c9c8f5d50e11bd34cf63632414ca98')
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\UserActivation))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

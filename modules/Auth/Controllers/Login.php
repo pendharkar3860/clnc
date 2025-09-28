@@ -14,7 +14,7 @@
         }
         public function index()
         {    
-            $session = \Config\Services::session($config);  
+            $session = \Config\Services::session();  
             $session->remove('username');
             $session->remove('userid');
             $session->remove('email');
@@ -70,24 +70,27 @@
                         {                                                       
                             $firmdata=$firmmodel->where('userid',$data['userid'])->first();                              
                             $firmid=0;
-                            if($firmdata)
+                            $firmdetail="";
+                            if(isset($firmdata) && !empty($firmdata))
                             {
-                                $firmid=$firmdata['firmid'];
+                                $firmdetail=$firmdata;
+                                $firmid=$firmdata['firmid'];                                
                             }
                             $ses_data = [
-                                'userid'       => $data['userid'],
-                                'uesrtypeid'       => $data['uesrtypeid'],
-                                'firmid'       => $firmid,
-                                'username'     => $data['username'],
-                                'email'    => $data['email'],
-                                'isLoggedIn'     => TRUE
+                                'userid'=> $data['userid'],
+                                'usertypeid'=> $data['usertypeid'],
+                                'firmid'=> $firmid,
+                                'firmdetail'=>$firmdetail,
+                                'username' => $data['username'],
+                                'email' => $data['email'],
+                                'isLoggedIn'=> TRUE
                             ];
                             $session->set($ses_data);
                             return redirect()->to('/admin/dashboard');
                         }else{
                             
                             $session->setFlashdata('msg', 'Email not Found');
-                            return redirect()->to('/login');
+                            return redirect()->to('/Login');
                         }
                         
                                                 
@@ -96,7 +99,7 @@
                 }
 
                 echo view('Modules\Auth\Views\Layout\header',$data);
-                echo view('Modules\Auth\Views\login',$data);
+                echo view('Modules\Auth\Views\Login',$data);
                 echo view('Modules\Auth\Views\Layout\footer');
             } 
             catch (\CodeIgniter\UnknownFileException $e) 

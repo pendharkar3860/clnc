@@ -2,11 +2,23 @@
     
     function CheckLogin()
     {
-        $session = \Config\Services::session($config);                
+        $session = \Config\Services::session(); 
+        
         if ($session->get('isLoggedIn')==0)
         {               
-            return redirect()->to('/admin/login');
+            return redirect()->to('/admin/Login');
         }
+    }
+    function FirmAdded()
+    {
+        $session = \Config\Services::session(); 
+        $result=0;
+        
+        if ($session->get('firmid')>0)
+        {               
+            $result=1;
+        }
+        return $result;
     }
     function CheckProfile($userid)
     {
@@ -23,4 +35,13 @@
         }
         return $flag;
     }
+    function FirmDetail()
+    {
+        $session = \Config\Services::session(); 
+        $firmdata="";
+        $firmdata=$session->get('firmdetail');
+        return $firmdata;
+    }
+    
+    
 ?>

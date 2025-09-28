@@ -1,0 +1,27 @@
+CRITICAL - 2025-08-06 04:06:52 --> Object of class CodeIgniter\Pager\Pager could not be converted to string
+in ROOTPATH\modules\Admin\Views\customerlistview.php on line 99.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1184): CodeIgniter\View\View->render('Modules\\Admin\\Views\\customerlistview', [], true)
+ 4 ROOTPATH\modules\Admin\Controllers\customer.php(37): view('Modules\\Admin\\Views\\customerlistview', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Customer->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Customer))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-06 04:13:01 --> syntax error, unexpected ';', expecting ']'
+in ROOTPATH\modules\Admin\Controllers\customer.php on line 27.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('ROOTPATH\\modules\\Admin\\Controllers\\customer.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('Modules\\Admin\\Controllers\\customer')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('Modules\\Admin\\Controllers\\customer')
+ 4 [internal function]: spl_autoload_call('Modules\\Admin\\Controllers\\customer')
+ 5 SYSTEMPATH\CodeIgniter.php(892): class_exists('\\Modules\\Admin\\Controllers\\customer', true)
+ 6 SYSTEMPATH\CodeIgniter.php(486): CodeIgniter\CodeIgniter->startController()
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2025-08-06 04:15:30 --> Argument 3 passed to CodeIgniter\BaseModel::paginate() must be of the type int or null, string given, called in D:\wamp64\www\clnc\modules\Admin\Controllers\customer.php on line 27
+in SYSTEMPATH\BaseModel.php on line 1177.
+ 1 ROOTPATH\modules\Admin\Controllers\customer.php(27): CodeIgniter\BaseModel->paginate(3, 'ROOTPATH\\public', 'ROOTPATH\\public', 'ROOTPATH\\public')
+ 2 SYSTEMPATH\CodeIgniter.php(934): Modules\Admin\Controllers\Customer->index()
+ 3 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Admin\Controllers\Customer))
+ 4 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

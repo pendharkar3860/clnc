@@ -9,18 +9,23 @@
     {
          private $objsession="";
         function __construct()
-        {
-            $this->objsession = \Config\Services::session($config);
-                                
+        {            
+            $this->objsession = \Config\Services::session();
+            if($this->objsession->get('isLoggedIn')==0)
+            {
+               header('Location:/login');
+               exit;
+            }
+            if($this->objsession->get('firmid')==0)
+            {            
+                header('Location:/admin/firm');
+                exit;
+            }                                      
         }        
         public function index()
         {
-            CheckLogin();    
-            $profile=CheckProfile($this->objsession->get('userid'));                       
-            if($profile == 0)
-            {                                
-                return redirect()->to(site_url('admin/profile')); 
-            }
+            $data["page"]="Dashboard";
+           
             
             
             if ($this->objsession->get('isLoggedIn')==1)
@@ -28,11 +33,12 @@
               
                 if($this->objsession->get('firmid')>0)
                 {
-                    echo view('Modules\Admin\Views\Layout\header');
-                    echo view('Modules\Admin\Views\Layout\sidebar');
-                    echo view('Modules\Admin\Views\Layout\navbar');
-                    echo view('Modules\Admin\Views\dashboard');                
-                    echo view('Modules\Admin\Views\Layout\footer'); 
+                    
+                    echo view('Modules\Admin\Views\Layout\header',$data);
+                    echo view('Modules\Admin\Views\Layout\sidebar',$data);
+                    echo view('Modules\Admin\Views\Layout\navbar',$data);
+                    echo view('Modules\Admin\Views\dashboard',$data);                
+                    echo view('Modules\Admin\Views\Layout\footer',$data); 
                 }
                 else
                 {

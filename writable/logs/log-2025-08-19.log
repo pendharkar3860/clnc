@@ -1,0 +1,28 @@
+ERROR - 2025-08-19 14:22:02 --> mysqli_sql_exception: Duplicate entry '0' for key 'PRIMARY' in D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `us...', 0)
+#1 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Database\BaseConnection.php(691): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `us...')
+#2 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Database\BaseConnection.php(605): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `us...')
+#3 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `us...', Array, false)
+#4 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, false)
+#7 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\BaseModel.php(692): CodeIgniter\Model->insert(Array, false)
+#8 D:\wamp64\www\clnc\modules\Auth\Controllers\Registration.php(58): CodeIgniter\BaseModel->save(Array)
+#9 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+#10 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+#11 D:\wamp64\www\clnc\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\wamp64\www\clnc\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2025-08-19 14:22:02 --> Duplicate entry '0' for key 'PRIMARY'
+in SYSTEMPATH\Database\BaseConnection.php on line 645.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `user` (`username`, `email`, `password`) VALUES (:username:, :email:, :password:)', [...], false)
+ 2 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], false)
+ 5 SYSTEMPATH\BaseModel.php(692): CodeIgniter\Model->insert([...], false)
+ 6 ROOTPATH\modules\Auth\Controllers\Registration.php(58): CodeIgniter\BaseModel->save([...])
+ 7 SYSTEMPATH\CodeIgniter.php(934): Modules\Auth\Controllers\Registration->createLogin()
+ 8 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(Modules\Auth\Controllers\Registration))
+ 9 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

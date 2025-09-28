@@ -4,17 +4,22 @@
     */
 
     namespace Modules\Admin\Controllers;
-    class Section extends \CodeIgniter\Controller
+    class Customerajax extends \CodeIgniter\Controller
     {
         public function index()
         {
            try
            {
-               
-            return redirect()->to(site_url('login'));
-            //echo site_url();
-            //return view('Modules\Admin\Views\IndexSection');  
-
+            
+            
+           $data = array(
+                "name" => "John Doe",
+                "age" => 30,
+                "city" => "New York",
+                 "hobbies" => array("reading", "hiking", "cooking")
+            );           
+            $response=json_encode($data);        
+            echo $response;
            }
            catch(\CodeIgniter\UnknownFileException $e)
            {
