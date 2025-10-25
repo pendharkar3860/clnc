@@ -4,12 +4,11 @@
  
 function ResetSearch()
 {
-   document.getElementById("fullname").value="";
-   document.getElementById("mobile1").value="";
-   document.getElementById("mobile2").value="";
-   document.getElementById("email").value="";
-   document.getElementById("customerlistform").submit();
-   
+   $("#fullname").value();
+   $("#mobile1").value();
+   $("#mobile2").value();
+   $("#email").value();
+      
 }
 </script>
 <div class="row">     

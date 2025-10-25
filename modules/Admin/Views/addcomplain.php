@@ -1,11 +1,37 @@
 
 <script>    
     $(document).ready(function() {
-        $(".modal-body").text("Jquery response ajax response");  
-          $("#btn_customermodel").click(function(){
-            //$('#myModal').modal('show');
+        var flagchecked=0;
+        
+        $("#btn_customermodel").click(function(){            
             GetCustmerData();
+            $('#myModal').modal('show');
+        });   
+        $("#addpumpmodel").click(function(){                        
+            $('#pumpmodel').modal('show');
         });
+         $(document).on('click', '.page-link', function(e){
+             e.preventDefault();
+             var pgnumber=0;   
+             pagenumber=$.trim($(this).html());
+             SearchCustomer(pagenumber);
+         });
+         $(document).on('click', 'input[name="customerchk[]"]', function(e){            
+              
+                if(flagchecked==$(this).val())
+                {
+                    $(this).prop('checked', false);
+                    flagchecked=0;
+                }
+                else
+                {
+                    $("input[name='customerchk[]']").prop('checked', false);
+                    $(this).prop('checked', true);
+                                    
+                    flagchecked=$(this).val();
+                }
+                           
+         });
     });
   
     
@@ -23,6 +49,39 @@
     xhttp.open("GET", "<?php echo base_url('admin/customerajax');?>");
     xhttp.send();                  
   }
+  function SearchCustomer(page=0)
+  {
+        var formdata=$('#customerlistform').serialize();
+        var url="";
+       
+        if(page>0)
+        {
+            
+            url="<?php echo base_url('admin/customerajax/');?>"+page;
+        }
+        else
+        {
+            url="<?php echo base_url('admin/customerajax');?>";
+        }
+       $.ajax({
+        url: url,
+        method: 'POST',
+        data:formdata,
+        dataType: 'html',
+        success: function(response) {
+           // console.log("Data received:", response);
+            $(".modal-body").html(response);
+            flagchecked=0;
+        },
+        error:  function(jqXHR, textStatus, errorThrown) {
+        // Handle error response here
+        console.error("AJAX Error:", textStatus, errorThrown);
+
+        // Access the raw response text from the server
+        console.error("Response Text:", jqXHR.responseText);
+        }
+    });
+  }
   function GetCustmerData()
   {
       $.ajax({
@@ -30,15 +89,54 @@
         method: 'GET',
         dataType: 'html',
         success: function(response) {
-            console.log("Data received:", response);
+           // console.log("Data received:", response);
+            $(".modal-body").html(response);
         },
         error: function(xhr, status, error) {
             console.error("Error:", error);
         }
     });
       
-  }    
-   
+  }  
+  
+  function ResetSearch()
+    {
+       $("#srhfullname").val("");
+       $("#srhmobile1").val("");
+       $("#srhmobile2").val("");
+       $("#srhmail").val(""); 
+       SearchCustomer();
+    }
+    function GetCustomerDetail()
+    {
+            if($('input[name="customerchk[]"]').is(':checked')==true)
+            {
+               var customerid=$('input[name="customerchk[]"]:checked').val();
+                var customerinfo="";
+                $("#customerinfo").html("");
+                $.ajax({
+                 url: '<?php echo base_url('admin/customerajax/customerdetail/');?>'+customerid,
+                 method: 'POST',
+                 dataType: 'json',
+                 success: function(res) {
+                     customerinfo='<h5 class="card-title">'+res["customername"]+'</h5><p class="card-title"><b>'+res["customermobile1"]+'</b></p> <p class="card-text">'+res["customermobile2"]+'</p> <p class="card-text">'+res["customeraddress"]+'</p>';
+                     $("#customerinfo").html(customerinfo);
+                       $('#myModal').modal('hide');                      
+                 },
+                 error: function(xhr, status, error) {
+                     console.error("Error:", error);
+                 }
+                });
+            }
+            else
+            {
+               alert("Please select customer!");
+            }
+            
+            /*
+            
+        */
+    }
 </script>
 <div class="row">     
     <div class="col-12">
@@ -57,11 +155,22 @@
                 $complainid=0;
               ?>
             <p class="text-medium-emphasis small"><b>Add complain</b>  </p>
-            <p class="text-medium-emphasis small">
-               
-                <button id="btn_customermodel" type="button" class="btn btn-ghost-secondary" >Customer</button>
-               
-            </p>
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-medium-emphasis small"><button id="btn_customermodel" type="button" class="btn btn-outline-secondary" >Customer</button></p>
+                </div>
+                <div class="col-md-6">
+                     <div class="card">
+                      <h5 class="card-header">Customer Details</h5>
+                      <div class="card-body" id="customerinfo">
+                      
+                      </div>
+                    </div>
+                </div>
+            </div>
+            
+            
+            
           <?php }?>
             <div class="tab-content rounded-bottom">
                 <?php  if(isset($validation)): ?>
@@ -71,6 +180,7 @@
                        <div class="alert alert-success" role="alert"><?php echo session()->get('success');?></div>
                        <?php endif;?>   
               <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1003">
+                   
                 <form name="complainform" action="<?php echo ($complainid>0)? base_url('admin/complain/update'):base_url('admin/complain/insert'); ?>" method="POST" class="row g-3">
                     
                     <input class="form-control" name="customerid" id="customerid" type="hidden" value="<?php echo $complainid;?>">
@@ -78,35 +188,26 @@
                     <input class="form-control" name="firmid" id="firmid" type="hidden" value="<?php echo $firmid;?>">
                                         
                     
-                    <div class="col-md-6">
-                      <label class="form-label" for="fullname">Full Name</label>
-                      <input class="form-control" name="fullname" id="fullname" type="text" value="<?php  echo (isset($complaindata) && !empty($complaindata))?$complaindata['customername']: ""; ?>" required>
+                    <div class="col-md-2">
+                    <label class="form-label" for="mobile1">Motor/Pump Company</label>
+                      <select class="form-control" name="cars" id="cars">   
+                          <option value="0">Select Company</option>
+                          <option value="volvo">Volvo</option>
+                          <option value="saab">Saab</option>                       
+                          <option value="mercedes">Mercedes</option>
+                          <option value="audi">Audi</option>
+                        
+                      </select>                                     
                     </div>
-                    
-                    <div class="col-md-6">
-                      <label class="form-label" for="mobile1">Mobile-1</label>
-                      <input class="form-control" pattern="[7896][0-9]{9}" name="mobile1" id="mobile1" type="text" value="<?php  echo (isset($complaindata) && !empty($complaindata))?$complaindata['customermobile1']: ""; ?>" required>
+                    <div class="col-md-2">
+                        <label class="form-label" for="addcompany">&nbsp;</label>
+                        <p class="text-medium-emphasis small"><button id="addcompany" type="button" class="btn btn-outline-secondary" >Add Company</button></p>
                     </div>
-                      <div class="col-md-6">
-                      <label class="form-label" for="mobile2">Mobile-2</label>
-                      <input class="form-control" pattern="[7896][0-9]{9}" name="mobile2" id="mobile2" type="text" value="<?php  echo (isset($complaindata) && !empty($complaindata))?$complaindata['customermobile2']: ""; ?>" >
+                    <div class="col-md-2">
+                        <label class="form-label" for="addcompany">&nbsp;</label>
+                        <p class="text-medium-emphasis small"><button id="addpumpmodel" type="button" class="btn btn-outline-secondary" >Select Model</button></p>
                     </div>
-                    <div class="col-md-6">
-                      <label class="form-label" for="email">Email</label>
-                      <input class="form-control" name="email" id="email" type="email" value="<?php  echo (isset($complaindata) && !empty($complaindata))?$complaindata['customeremail']: ""; ?>" >
-                    </div>
-                     <div class="col-12">
-                      <label class="form-label" for="customeraddress">Customer Address </label>
-                      <input class="form-control" name="customeraddress" id="customeraddress" type="text" value="<?php  echo (isset($complaindata) && !empty($complaindata))?$complaindata['customeraddress']: ""; ?>" >
-                    </div>
-                     <div class="col-md-6">
-                      <label class="form-label" for="firm">Firm</label>
-                      <input class="form-control" name="firm" id="firm" type="text" value="<?php  echo (isset($complaindata) && !empty($complaindata))?$complaindata['customerfirm']: ""; ?>" >
-                    </div>
-                    <div class="col-12">
-                      <label class="form-label" for="customerfirmaddress">Firm Address </label>
-                      <input class="form-control" name="customerfirmaddress" id="customerfirmaddress" type="text" value="<?php  echo (isset($complaindata) && !empty($complaindata))?$complaindata['customerfirmaddress']: ""; ?>" >
-                    </div>
+                    <div class="col-md-6"></div>
                                      
                    <?php if(isset($complaindata) && !empty([$complaindata])){  ?>
                   <div class="col-12">                    
@@ -126,7 +227,7 @@
       </div>
     </div>
 
-<!<!-- POP UP MODEL  -->
+<!<!-- Customer Popup  -->
 
 <div class="modal fade modal-xl" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -138,10 +239,54 @@
       <div class="modal-body">
         here the text
       </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-coreui-dismiss="modal">Close</button>
-        <button type="button" id="savemodel" class="btn btn-primary">Save changes</button>
+      <div class="modal-footer"></div>
+    </div>
+  </div>
+</div>
+
+<!-- Pump Model Popup  -->
+
+<div class="modal fade modal-xl" id="pumpmodel" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">PumpModel</h5>
+        <button type="button" class="btn-close" data-coreui-dismiss="modal" aria-label="Close"></button>
       </div>
+      <div class="modal-body">
+          <form name="complainform" action="" method="POST" class="row g-3">
+            <div class="col-md-2">
+              <label class="form-label" for="addcompany">Model Name</label>
+              <input class="form-control" name="modelname" id="modelname" type="text" value="" >
+            </div> 
+            <div class="col-md-2">
+            <label class="form-label" for="mobile1">HP</label>
+              <select class="form-control" name="hp" id="hp">   
+                  <option value="0">HP</option>
+                  <option value="1">0.5</option>
+                  <option value="2">1</option>
+                  <option value="3">1.5</option>
+                  <option value="4">1.2</option>
+                  <option value="5">1.75</option>
+                  <option value="6">2</option>
+              </select>                                     
+            </div>                         
+            <div class="col-md-2">                                
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">
+                1PH
+                 </label>
+                </div>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">3PH</label>
+                </div>
+            </div>
+            <div class="col-md-6"></div>
+          </form>
+      </div>
+      <div class="modal-footer"></div>
     </div>
   </div>
 </div>

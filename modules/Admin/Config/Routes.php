@@ -30,6 +30,9 @@ $routes->post('admin/profile/update/(:num)','\Modules\Admin\Controllers\Profile:
 $routes->get('admin/customer','\Modules\Admin\Controllers\customer');
 $routes->post('admin/customer','\Modules\Admin\Controllers\customer');
 $routes->get('admin/customerajax','\Modules\Admin\Controllers\customerajax');
+$routes->post('admin/customerajax','\Modules\Admin\Controllers\customerajax');
+$routes->post('admin/customerajax/(:num)','\Modules\Admin\Controllers\customerajax::index/$1');
+$routes->post('admin/customerajax/customerdetail/(:num)','\Modules\Admin\Controllers\customerajax::GetSingleCusomerdata/$1');
 
 $routes->get('admin/customer/(:num)', '\Modules\Admin\Controllers\Customer::index/$1');
 
