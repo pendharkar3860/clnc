@@ -90,5 +90,12 @@
           </nav>
         </div>
       </header>
+     
     <div class="body flex-grow-1 px-3"><!--CLOSE IN FOOTER-->
         <div class="container-lg"><!--CLOSE IN FOOTER-->
+            <div id="loader" class="customspinner">
+                <div class="spinner-grow custom_loader text-danger" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            

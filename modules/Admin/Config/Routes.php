@@ -41,6 +41,12 @@ $routes->post('admin/customer/insert', '\Modules\Admin\Controllers\Customer::Cre
 $routes->post('admin/customer/update', '\Modules\Admin\Controllers\Customer::UpdateCustomer');
 $routes->get('admin/customer/details/(:num)', '\Modules\Admin\Controllers\Customer::UpdateMode/$1');
 
+$routes->get('admin/pumpmodel', '\Modules\Admin\Controllers\Pumpmodel::index');
+$routes->get('admin/pumpmodel/addnew', '\Modules\Admin\Controllers\Pumpmodel::PumpmodelForm');
+$routes->post('admin/pumpmodel/insert', '\Modules\Admin\Controllers\Pumpmodel::CreatePumpmodel');
+$routes->post('admin/pumpmodel/update', '\Modules\Admin\Controllers\Pumpmodel::UpdatePumpmodel');
+$routes->get('admin/pumpmodel/details/(:num)', '\Modules\Admin\Controllers\Pumpmodel::Updatemode/$1');
+
 $routes->get('admin/complain','\Modules\Admin\Controllers\complain');
 
 ?>

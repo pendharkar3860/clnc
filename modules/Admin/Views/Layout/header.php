@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="<?php echo base_url('modules/common/theme/coreui/dist/css/vendors/simplebar.css');?>">
     <!-- Main styles for this application-->
     <link href="<?php echo base_url('modules/common/theme/coreui/dist/css/style.css');?>" rel="stylesheet">
+    <link href="<?php echo base_url('modules/common/theme/coreui/dist/css/customstyle.css');?>" rel="stylesheet">
     <!-- We use those styles to show code examples, you should remove them in your application.-->
     <!--
     <link href="<?php //echo base_url('modules/common/theme/coreui/dist/css/examples.css');?>" rel="stylesheet">

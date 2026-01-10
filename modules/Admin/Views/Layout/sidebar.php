@@ -44,6 +44,15 @@
             
             </ul>
         </li>
+        <li class="nav-group"><a class="nav-link nav-group-toggle" href="#">
+            <svg class="nav-icon">
+              <use xlink:href="<?php echo base_url('modules/common/theme/coreui/dist/vendors/@coreui/icons/svg/free.svg#cil-satelite')?>"></use>
+            </svg>Pumps Model</a>
+            <ul class="nav-group-items">
+                <li class="nav-item"><a class="nav-link" href="<?php echo base_url('admin/pumpmodel');?>"><span class="nav-icon"></span> Model List</a></li>
+                <li class="nav-item"><a class="nav-link" href="<?php echo base_url('admin/pumpmodel/addnew');?>"><span class="nav-icon"></span>Add Model</a></li>                
+            </ul>
+        </li>
         <?php }?>
             
             
