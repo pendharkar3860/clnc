@@ -9,3 +9,4 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Other/CascadeStyleSheet.css to ed
 
 .customspinner{position: fixed;width:100vw;height:100vh;top:0;right:0;z-index:1100; background-color: #f0f0f0;opacity: 0.5;display:none;}
 .custom_loader{width:64px;height:64px;margin:45vh auto;display:block;opacity:1;}
+.custom_btn_back{width:128px;height:20px;display:block;}
