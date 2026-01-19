@@ -10,6 +10,7 @@ use CodeIgniter\Validation\StrictRules\Rules;
 use App\Validation\UserRules;
 use App\Validation\FirmRules;
 use App\Validation\CustomerRules;
+use App\validation\PumpmodelRules;
 class Validation extends BaseConfig
 {
     // --------------------------------------------------------------------
@@ -30,6 +31,7 @@ class Validation extends BaseConfig
         UserRules::class,
         FirmRules::class,
         CustomerRules::class,
+        PumpmodelRules::class
     ];
 
     /**
