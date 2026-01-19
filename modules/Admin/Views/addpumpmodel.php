@@ -1,23 +1,41 @@
+
+<script>
+  function previous()
+  {
+      //console.log("<?php echo base_url('admin/pumpmodel'); ?>/addnew");
+      window.location.replace("<?php echo base_url('admin/pumpmodel'); ?>");
+      
+  }
+ 
+
+</script>
 <div class="row">     
     <div class="col-12">
-      <div class="card mb-4">
+        
+      <div class="card mb-4">          
           <div class="card-header"><strong>Add New Model</strong></div>
+          
         <div class="card-body">
+                       
           <?php /* if($firmid==0){ ?>
             <p class="text-medium-emphasis small"><b>Hello <?php echo $userdata[0]->firstname." ".$userdata[0]->lastname;?>  Create your Company</b>  </p>
           <?php }else{?>
             <p class="text-medium-emphasis small"><b>Hello <?php echo $userdata[0]->firstname." ".$userdata[0]->lastname;?> , Update your Company</b>  </p>
           <?php }*/ ?>
             <div class="tab-content rounded-bottom">
+               
                 <?php if(isset($validation)): ?>
                     <div class="alert alert-danger" role="alert"><?php echo $validation->listErrors();?></div>
                 <?php endif;?>
-                    
+                     
               <div class="tab-pane p-3 active preview" role="tabpanel" id="preview-1003">
+                  
+                  
                 <form action="<?php echo ($pumpmodelid>0)? base_url('admin/pumpmodel/update'):base_url('admin/pumpmodel/insert'); ?>" method="POST" class="row g-3">
                     <input class="form-control" name="userid" id="userid" type="hidden" value="<?php echo $userid;?>"/>
                     <input class="form-control" name="firmid" id="firmid" type="hidden" value="<?php  echo $firmid;?>" />
                     <input class="form-control" name="pumpmodelid" id="pumpmodelid" type="hidden" value="<?php  echo (isset($modeldata) && !empty($modeldata))?$modeldata["pumpmodelid"]: "0"; ?>" />
+                    <div class="col-md-12"><button class="btn btn-secondary rounded-0" onclick="previous();">Back</button></div> 
                 <div class="col-md-5">
                   <label class="form-label" for="addcompany">Model Name</label>
                   <input class="form-control" name="modelname" id="modelname" type="text" value="<?php  echo (isset($modeldata) && !empty($modeldata))?$modeldata["modelname"]: ""; ?>" required>

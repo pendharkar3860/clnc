@@ -1,8 +1,21 @@
 
 <script>
-  
+  function Addnew()
+  {
+      //console.log("<?php echo base_url('admin/pumpmodel'); ?>/addnew");
+      window.location.replace("<?php echo base_url('admin/pumpmodel'); ?>/addnew");
+      
+  }
  
-
+function ResetSearch()
+{
+    //console.log("reset funxtion");
+   $("#searchmodelname").val("");
+   $("#searchhp").val("");
+   $("#phase1").prop('checked',false);
+   $("#phase3").prop('checked',false);
+      window.location.replace("<?php echo base_url('admin/pumpmodel');?>");
+}
 </script>
 <div class="row">     
     <div class="col-12">
@@ -23,27 +36,43 @@
                         <div class="card-body">
                           <form name="modellistform" id="modellistform" action="<?php echo base_url('admin/pumpmodel'); ?>" method="POST" class="row g-3">                                                                                                    
                             <div class="col-md-4">
-                              <label class="form-label" for="fullname">Full Name</label>
-                              <input class="form-control" name="modelname" id="modelname" type="text" value="<?php echo (isset($searchdata['modelname'])&& !empty($searchdata['modelname'])?$searchdata['modelname']:""); ?>" >
+                              <label class="form-label" for="fullname">Model Name</label>
+                              <input class="form-control" name="searchmodelname" id="searchmodelname" type="text" value="<?php echo (isset($searchdata['modelname'])&& !empty($searchdata['modelname'])?$searchdata['modelname']:""); ?>" >
                             </div>
 
                             <div class="col-md-2">
-                              <label class="form-label" for="mobile1">HP-1</label>
-                              <input class="form-control" pattern="[7896][0-9]{9}" name="searchhp" id="searchhp" type="text" value="<?php echo (isset($searchdata['hpid'])&& !empty($searchdata['hpid'])?$searchdata['hpid']:""); ?>" >
+                              <label class="form-label" for="mobile1">HP</label>
+                                <select class="form-control" name="searchhp" id="searchhp" required> 
+                                    <option value="">HP</option>
+                                    <?php if(isset($hp) && !empty($hp)){  $hselected="";?>
+                                        <?php foreach ($hp as $khp => $dhp) { ?>
+                                        <?php ($searchdata["hpid"] == $dhp->hpid)?$hselected="selected":$hselected=""; ?>
+                                    <option <?php echo $hselected;?> value="<?php echo $dhp->hpid;?>"><?php echo $dhp->hp;?></option>
+                                        <?php }?>
+                                    <?php }?>   
+                                </select>  
                             </div>
                               <div class="col-md-2">
-                              <label class="form-label" for="mobile2">Mobile-2</label>
-                              <input class="form-control" pattern="[7896][0-9]{9}" name="rpmid" id="rpmid" type="text" value="<?php echo (isset($searchdata['rpmid'])&& !empty($searchdata['rpmid'])?$searchdata['rpmid']:""); ?>" >
+                              <label class="form-label" for="mobile2">Phase</label>
+                            <div class="form-check">
+
+                                <input class="form-check-input" type="radio" name="searchphase" id="phase1" value="1PH" <?php echo ($searchdata["phase"]=="1PH")?"checked":""; ?>  >
+                                <label class="form-check-label" for="exampleRadios1">1PH</label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="searchphase" id="phase3" value="3PH" <?php echo ($searchdata["phase"]=="3PH")?"checked":""; ?> >
+                                <label class="form-check-label" for="exampleRadios2">3PH</label>
+                            </div>
                             </div>
                             <div class="col-md-4">
-                              <label class="form-label" for="email">Email</label>
-                              <input class="form-control" name="modeldescid" id="modeldescid" type="modeldescid" value="<?php echo (isset($searchdata['modeldescid'])&& !empty($searchdata['modeldescid'])?$searchdata['modeldescid']:""); ?>" >
+                              
                             </div>
-                              <div class="col-12" style="text-align: right;">
-                                  <button type="button" class="btn btn-primary rounded-0" onclick="ResetSearch()">ResetSearch</button>
-                                  <button class="btn btn-secondary rounded-0" type="submit">Search</button>
+                            <div class="col-12" style="text-align: right;">
+                                <button type="button" class="btn btn-secondary rounded-0" onclick="ResetSearch()">ResetSearch</button>
+                                <button class="btn btn-dark rounded-0" type="submit">Search</button>
+                                <button class="btn btn-primary rounded-0" onclick="Addnew()" type="button">Add New</button>
                             </div>
-                            </form> 7572887653
+                            </form> 
                         </div>
                     </div>
                  

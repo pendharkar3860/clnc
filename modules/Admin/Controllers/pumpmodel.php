@@ -52,22 +52,29 @@ class Pumpmodel extends \CodeIgniter\Controller
             $rpm = $query->getResult(); 
             $queryhp = $this->db->query('SELECT * FROM hpmaster WHERE status="N" AND is_deleted="N" ORDER BY hp');
             $hp = $queryhp->getResult(); 
-            
+            $segment=3;  
             
             $searchparams['pumpmodelmaster.userid']=$userid;
             $searchparams['pumpmodelmaster.firmid']=$firmid;
             $searchparams['pumpmodelmaster.is_deleted']="N";
-            $segment=3; 
-            if($this->request->getVar('modelname')!="")
+            ($this->request->getVar('searchhp')!="")?$searchparams['pumpmodelmaster.hpid']=$this->request->getVar('searchhp'):"";
+            ($this->request->getVar('searchphase')!="")?$searchparams['pumpmodelmaster.phase']=$this->request->getVar('searchphase'):"";
+            $searchdata=["modelname"=>$this->request->getVar('searchmodelname'),
+                        "hpid"=>$this->request->getVar('searchhp'),
+                        "phase"=>$this->request->getVar('searchphase')
+                    ];
+            
+            
+            if($this->request->getVar('searchmodelname')!="")
             {
-                $searchname=$this->request->getVar('modelname');
+                $searchname=$this->request->getVar('searchmodelname');
                 $listrows = [
                 'pagedata' => $this->objpumpmodel->select("pumpmodelmaster.*,hpmaster.hp,rpmmaster.rpm,modeldescmaster.modeldesc,companymaster.companyname")
                         ->join('hpmaster', 'pumpmodelmaster.hpid = hpmaster.hpid', 'left')
                         ->join('rpmmaster', 'pumpmodelmaster.rpmid = rpmmaster.rpmid', 'left')
                         ->join('modeldescmaster', 'pumpmodelmaster.modeldescid = modeldescmaster.modeldescid', 'left')
                         ->join('companymaster', 'pumpmodelmaster.companyid = companymaster.companyid', 'left')
-                        ->where($searchparams)->like('customername',$searchname,'both')
+                        ->where($searchparams)->like('modelname',$searchname,'both')
                         ->paginate(10, 'group1', $pagenum, $segment),
                 'pager' => $this->objpumpmodel->pager,
                 ];                
@@ -139,7 +146,7 @@ class Pumpmodel extends \CodeIgniter\Controller
             {
 
                 $rules = [
-                    'modelname'=> 'required', 
+                    'modelname'=> 'required|UniqueModelname[]', 
                     'company'=> 'required', 
                     'hp'=> 'required', 
                     'phase'=> 'required', 
